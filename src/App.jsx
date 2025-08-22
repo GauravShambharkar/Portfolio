@@ -1,11 +1,7 @@
 import "./App.css";
-import AboutMe from "./Components/AboutMe";
-import Education from "./Components/Education";
-import Home from "./Components/Home";
-import RecentWork from "./Components/RecentWork";
-import Resume from "./Components/Resume";
-import Skills from "./Components/Skills";
 import { ReactLenis, useLenis } from "lenis/react";
+import Nav from "./Components/Nav";
+import Header from "./Components/Header";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -15,15 +11,12 @@ function App() {
 
   return (
     <>
-    
-      {/* <RemoveScrollBar/> */}
-      <ReactLenis root />
-      <Home />
-      <AboutMe />
-      <Skills />
-      <RecentWork />
-      <Resume />
-      <Education />
+      <div className="w-full h-screen">
+        {/* <RemoveScrollBar/> */}
+        <ReactLenis root />
+        <Nav />
+        <Header />
+      </div>
     </>
   );
 }

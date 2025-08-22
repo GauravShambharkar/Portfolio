@@ -10,10 +10,43 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #CBCBCB;
+    background-color: #09090B;
     scroll-behavior: smooth;
     overflow-y: scroll;
+}
+
+.allcenter {
+    @apply flex justify-center items-center;
+}
+
+.ycenter {
+    @apply flex justify-center;
+}
+
+.xcenter {
+    @apply flex items-center;
+}
+
+.xbetween {
+    @apply justify-between;
+}
+
+.xend {
+    @apply items-end;
+}
+
+.xstart {
+    @apply items-start;
+}
+
+.yend {
+    @apply justify-end;
+}
+
+.ystart {
+    @apply justify-start;
+}
+
+.borderlight {
+    @apply border border-[#cbcbcb];
 }
