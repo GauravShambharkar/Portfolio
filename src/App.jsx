@@ -2,6 +2,7 @@ import "./App.css";
 import { ReactLenis, useLenis } from "lenis/react";
 import Nav from "./Components/Nav";
 import Header from "./Components/Header";
+import Profile from "./Components/Profile";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <ReactLenis root />
         <Nav />
         <Header />
+        <Profile />
       </div>
     </>
   );

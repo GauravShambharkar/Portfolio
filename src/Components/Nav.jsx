@@ -7,8 +7,8 @@ const Nav = () => {
         <div className="w-190 h-12 borderlight  px-2 xcenter gap-2  xbetween text-white ">
           <a href="">logo</a>
           <div className="flex gap-2 font-light ">
-            <a className="">github</a>
-            <a className="">theme</a>
+            <a href="" className="">github</a>
+            <a href="" className="">theme</a>
           </div>
         </div>
       </div>

@@ -31,20 +31,22 @@ body {
     @apply justify-between;
 }
 
-.xend {
-    @apply items-end;
-}
+
 
 .xstart {
     @apply items-start;
 }
 
-.yend {
+.xend {
     @apply justify-end;
 }
 
 .ystart {
     @apply justify-start;
+}
+
+.yend {
+    @apply flex justify-end;
 }
 
 .borderlight {
