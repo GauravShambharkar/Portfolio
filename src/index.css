@@ -56,5 +56,9 @@ body {
 }
 
 .detail_icon_child {
-    @apply text-[#989898] size-4;
+    @apply text-[#b1b1b1] size-4;
+}
+
+.lucide_icon {
+    @apply text-[#ffffff] size-4;
 }

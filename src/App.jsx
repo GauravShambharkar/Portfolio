@@ -4,6 +4,8 @@ import Nav from "./Components/Nav";
 import Header from "./Components/Header";
 import Profile from "./Components/Profile";
 import Details from "./Components/Details";
+import Socials from "./Components/Socials";
+import About from "./Components/About";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Header />
         <Profile />
         <Details/>
+        <Socials/>
+        <About/>
       </div>
     </>
   );

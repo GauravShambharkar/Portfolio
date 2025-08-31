@@ -3,14 +3,14 @@ import React from "react";
 const Profile = () => {
   return (
     <>
-      <div className="w-full xcenter borderlight">
+      <div className="w-full xcenter borderlight">            
         <div className="w-190 h-42 borderlight flex">
-          <div className="w-42 h-full borderlight">
+          <div className="w-52 h-full borderlight">
             <a href="">img</a>
           </div>
           <div className="flex flex-col text-[14px] xend p-2 borderlight w-full h-full">
-            <h1 className="text-white">Profile user</h1>
-            <h1 className="text-white">Profile Role</h1>
+            <h1 className="text-white">Gaurav Shambharkar</h1>
+            <h1 className="text-[#9e9e9e]">Full Stack developer | UI/UX</h1>
           </div>
         </div>
       </div>

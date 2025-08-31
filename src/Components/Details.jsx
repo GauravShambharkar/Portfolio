@@ -1,12 +1,40 @@
 import { Code2, Mail, MapPin, Phone } from "lucide-react";
+import { h1 } from "motion/react-client";
 import React, { useState } from "react";
 
 const Details = () => {
   const [data, setData] = useState([
-    { icon: <Code2 className="detail_icon_child" />, text: "Full Stack Developer & UI/UX Designer" },
-    { icon: <MapPin className="detail_icon_child" />, text: "hinganghat, Maharashtra, India" },
-    { icon: <Mail className="detail_icon_child" />, text: "gauravs100kar@gmail.com" },
-    { icon: <Phone className="detail_icon_child"/>, text: "+91-8432826130" },
+    {
+      icon: <Code2 className="detail_icon_child" />,
+      text: "Full Stack Developer & UI/UX Designer",
+    },
+    {
+      icon: <MapPin className="detail_icon_child" />,
+      text: "hinganghat, Maharashtra, India",
+    },
+    {
+      icon: <Mail className="detail_icon_child" />,
+      text: (
+        <a
+          className="hover:underline"
+          target="_blank"
+          href="mailto:https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRrkqZkFSpzhqbxKHDXffTfJstzLKBsCLrQlfLNQPgGDWsDCswJrHmSPWTxlJHRGNzQfDTQ"
+        >
+          gauravs100kar@gmail.com
+        </a>
+      ),
+    },
+    {
+      icon: <Phone className="detail_icon_child" />,
+      text: (
+        <a
+          target="_blank"
+          href="tele:https://mail.google.com/mail/u/0/#inbox?compose=new"
+        >
+          +91-8432826130
+        </a>
+      ),
+    },
   ]);
 
   return (
