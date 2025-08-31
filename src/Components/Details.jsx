@@ -3,10 +3,10 @@ import React, { useState } from "react";
 
 const Details = () => {
   const [data, setData] = useState([
-    { icon: <Code2 />, text: "Full Stack Developer & UI/UX Designer" },
-    { icon: <MapPin />, text: "hinganghat, Maharashtra, India" },
-    { icon: <Mail />, text: "gauravs100kar@gmail.com" },
-    { icon: <Phone />, text: "+91-8432826130" },
+    { icon: <Code2 className="detail_icon_child" />, text: "Full Stack Developer & UI/UX Designer" },
+    { icon: <MapPin className="detail_icon_child" />, text: "hinganghat, Maharashtra, India" },
+    { icon: <Mail className="detail_icon_child" />, text: "gauravs100kar@gmail.com" },
+    { icon: <Phone className="detail_icon_child"/>, text: "+91-8432826130" },
   ]);
 
   return (
@@ -17,7 +17,7 @@ const Details = () => {
             return (
               <div key={index} className="flex gap-2 ycenter ">
                 <div className="detail_icon_parent">
-                  <span className="detail_icon_child">{items.icon}</span>
+                  <span>{items.icon}</span>
                 </div>
                 <h1 className="text-sm">{items.text}</h1>
               </div>

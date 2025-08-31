@@ -56,5 +56,5 @@ body {
 }
 
 .detail_icon_child {
-    @apply text-[#989898] size-fit;
+    @apply text-[#989898] size-4;
 }
