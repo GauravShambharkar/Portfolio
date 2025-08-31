@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <div className="w-full h-62 borderlight xcenter mt-12 ">
-        <div className="w-190 px-2 allcenter borderlight">
+        <div className="w-190 px-2 allcenter text-[14px] borderlight">
           <a href="" className="text-white">
             Some logo
           </a>

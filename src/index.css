@@ -50,3 +50,11 @@ body {
 .borderlight {
     @apply border border-[#cbcbcb];
 }
+
+.detail_icon_parent {
+    @apply flex items-center justify-center size-6 inset-shadow-xs inset-shadow-white/35 bg-[#474747] rounded-lg;
+}
+
+.detail_icon_child {
+    @apply text-[#989898] size-fit;
+}
