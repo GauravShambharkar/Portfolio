@@ -10,7 +10,7 @@ const Profile = () => {
           </div>
           <div className="flex flex-col text-[14px] xend p-2 borderlight w-full h-full">
             <h1 className="text-white">Gaurav Shambharkar</h1>
-            <h1 className="text-[#9e9e9e]">Full Stack developer | UI/UX</h1>
+            <h1 className="txtgray">Full Stack developer | UI/UX</h1>
           </div>
         </div>
       </div>

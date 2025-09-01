@@ -9,6 +9,8 @@
     font-family: Geist;
 }
 
+
+
 body {
     background-color: #09090B;
     scroll-behavior: smooth;
@@ -61,4 +63,8 @@ body {
 
 .lucide_icon {
     @apply text-[#ffffff] size-4;
+}
+
+.txtgray {
+    @apply text-[#b3b3b3];
 }

@@ -37,14 +37,14 @@ const Socials = () => {
                 <div className="flex gap-2 yend p-1">
                   <img
                     src={item.logo}
-                    alt=""
-                    className="size-11 cursor-pointer  allcenter"
+                    alt={item.platform}
+                    className="size-11 cursor-pointer allcenter"
                   />
                   <div className="flex flex-col ">
                     <h1 className="cursor-pointer hover:underline">
                       {item.platform}
                     </h1>
-                    <h1 className="text-[#8c8c8c]">{item.username}</h1>
+                    <h1 className="txtgray">{item.username}</h1>
                   </div>
                 </div>
                 <MoveUpRight className="size-4" />
