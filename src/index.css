@@ -29,6 +29,14 @@ body {
     @apply flex justify-center;
 }
 
+.flexcolx {
+    @apply flex flex-col items-center
+}
+
+.flexcoly {
+    @apply flex flex-col justify-center
+}
+
 .xbetween {
     @apply justify-between;
 }

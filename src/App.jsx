@@ -6,6 +6,7 @@ import Profile from "./Components/Profile";
 import Details from "./Components/Details";
 import Socials from "./Components/Socials";
 import About from "./Components/About";
+import Skills from "./Components/Skills";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Details/>
         <Socials/>
         <About/>
+        <Skills/>
       </div>
     </>
   );

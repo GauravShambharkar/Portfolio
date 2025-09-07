@@ -1,5 +1,7 @@
 import { Github, Linkedin } from "lucide-react";
 import React from "react";
+import UseAnimations from "react-useanimations";
+import github from "react-useanimations/lib/github";
 
 const Nav = () => {
   return (
@@ -14,6 +16,9 @@ const Nav = () => {
             >
               <Github className="lucide_icon" />
             </a>
+            {/* <div className="bg-white allcenter p-1">
+              <UseAnimations animation={github} />
+            </div> */}
             <a
               href=""
               className="border p-1 hover:bg-[#4b4b4b] transition-all duration-300 ease-in-out rounded-full"
