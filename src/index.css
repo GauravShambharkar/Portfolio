@@ -9,7 +9,16 @@
     font-family: Geist;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+    height: 6px;
+    background-color: #373737;
+}
 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(174, 174, 174);
+}
 
 body {
     background-color: #09090B;

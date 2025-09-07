@@ -3,7 +3,7 @@ import { h1 } from "motion/react-client";
 import React, { useState } from "react";
 
 const Details = () => {
-  const [data, setData] = useState([
+  const data = [
     {
       icon: <Code2 className="detail_icon_child" />,
       text: "Full Stack Developer & UI/UX Designer",
@@ -35,7 +35,7 @@ const Details = () => {
         </a>
       ),
     },
-  ]);
+  ];
 
   return (
     <>

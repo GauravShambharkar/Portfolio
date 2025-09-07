@@ -15,6 +15,11 @@ import {
   SiGithub,
   SiFigma,
   SiShadcnui,
+  SiOracle,
+  SiSpringboot,
+  SiRedis,
+  SiAdonisjs,
+  SiGooglegemini,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -37,8 +42,13 @@ const Skills = () => {
       href: null,
     },
     {
-      node: <SiShadcnui />,
+      node: <SiShadcnui className="size-8" />,
       title: "ShadCnUI",
+      href: null,
+    },
+    {
+      node: <SiOracle />,
+      title: "JAVA",
       href: null,
     },
   ];
@@ -60,9 +70,14 @@ const Skills = () => {
       href: "https://expressjs.com",
     },
     {
-      node: <SiMysql />,
+      node: <SiMysql className="size-10" />,
       title: "MySQL",
       href: "https://mysql.com",
+    },
+    {
+      node: <SiSpringboot />,
+      title: "SpringBoot",
+      href: null,
     },
     {
       node: <SiMongodb />,
@@ -78,6 +93,11 @@ const Skills = () => {
     {
       node: <SiFigma />,
       title: "Figma",
+      href: null,
+    },
+    {
+      node: <SiRedis />,
+      title: "Redis",
       href: null,
     },
   ];
@@ -104,7 +124,7 @@ const Skills = () => {
   return (
     <>
       <div className="w-full xcenter borderlight">
-        <div className="w-190 flex-col text-white borderlight  p-4 gap-3 ">
+        <div className="w-190 text-white borderlight  p-4 gap-5 ">
           <h1>Skills: </h1>
           <LogoLoop
             className="mt-2 h-fit"
@@ -114,7 +134,7 @@ const Skills = () => {
             logoHeight={35}
             gap={40}
             pauseOnHover
-            scaleOnHover
+            // scaleOnHover
             fadeOut
             fadeOutColor="black"
             ariaLabel="Technology partners"
@@ -127,7 +147,7 @@ const Skills = () => {
             logoHeight={35}
             gap={40}
             pauseOnHover
-            scaleOnHover
+            // scaleOnHover
             fadeOut
             fadeOutColor="black"
             ariaLabel="Technology partners"
