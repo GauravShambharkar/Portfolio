@@ -10,7 +10,15 @@ const Details = () => {
     },
     {
       icon: <MapPin className="detail_icon_child" />,
-      text: "hinganghat, Maharashtra, India",
+      text: (
+        <a
+          className="hover:underline"
+          target="_blank"
+          href="https://maps.app.goo.gl/nYbwxineb73hpCpo7"
+        >
+          Hinganghat, Maharashtra, India
+        </a>
+      ),
     },
     {
       icon: <Mail className="detail_icon_child" />,

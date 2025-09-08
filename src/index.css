@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: Geist;
-    src: url(Geist-Medium.ttf);
+    font-family: sleek;
+    src: url(../public/sleek.ttf);
 }
 
 * {
-    font-family: Geist;
+    font-family: sleek;
 }
 
 ::-webkit-scrollbar {
@@ -23,8 +23,10 @@
 body {
     background-color: #09090B;
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
+
+
 
 .allcenter {
     @apply flex justify-center items-center;

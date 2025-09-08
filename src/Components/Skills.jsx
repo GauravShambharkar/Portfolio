@@ -20,6 +20,7 @@ import {
   SiRedis,
   SiAdonisjs,
   SiGooglegemini,
+  SiReactrouter,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -49,6 +50,11 @@ const Skills = () => {
     {
       node: <SiOracle />,
       title: "JAVA",
+      href: null,
+    },
+    {
+      node: <SiReactrouter />,
+      title: "Reactrouter",
       href: null,
     },
   ];
@@ -124,10 +130,10 @@ const Skills = () => {
   return (
     <>
       <div className="w-full xcenter borderlight">
-        <div className="w-190 text-white borderlight  p-4 gap-5 ">
-          <h1>Skills: </h1>
+        <div className="w-190 max-[750px]:w-full text-white borderlight  p-4 gap-5 ">
+          <h1>Skills:</h1>
           <LogoLoop
-            className="mt-2 h-fit"
+            className="mt-2 h-fit "
             logos={techLogos}
             speed={30}
             direction="right"
@@ -136,11 +142,11 @@ const Skills = () => {
             pauseOnHover
             // scaleOnHover
             fadeOut
-            fadeOutColor="black"
+            fadeOutColor="#09090B"
             ariaLabel="Technology partners"
           />
           <LogoLoop
-            className="mt-2 h-fit"
+            className="mt-2 h-fit "
             logos={frameWork}
             speed={30}
             direction="left"
@@ -149,7 +155,7 @@ const Skills = () => {
             pauseOnHover
             // scaleOnHover
             fadeOut
-            fadeOutColor="black"
+            fadeOutColor="#09090B"
             ariaLabel="Technology partners"
           />
         </div>
