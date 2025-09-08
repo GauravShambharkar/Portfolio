@@ -25,20 +25,24 @@ import {
 
 const Skills = () => {
   const techLogos = [
-    { node: <SiReact />, title: "React", href: "https://react.dev" },
+    {
+      node: <SiReact className="text-[#3499ff]" />,
+      title: "React",
+      href: "https://react.dev",
+    },
     { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
     {
-      node: <SiTypescript />,
+      node: <SiTypescript className="text-[#3776ff]" />,
       title: "TypeScript",
       href: "https://www.typescriptlang.org",
     },
     {
-      node: <SiTailwindcss />,
+      node: <SiTailwindcss className="text-sky-400" />,
       title: "Tailwind CSS",
       href: "https://tailwindcss.com",
     },
     {
-      node: <SiJavascript />,
+      node: <SiJavascript className="text-yellow-300" />,
       title: "JavaScript",
       href: null,
     },
@@ -48,12 +52,12 @@ const Skills = () => {
       href: null,
     },
     {
-      node: <SiOracle />,
+      node: <SiOracle className="text-orange-600" />,
       title: "JAVA",
       href: null,
     },
     {
-      node: <SiReactrouter />,
+      node: <SiReactrouter className="text-red-400" />,
       title: "Reactrouter",
       href: null,
     },
@@ -61,48 +65,47 @@ const Skills = () => {
 
   const frameWork = [
     {
-      node: <SiPrisma />,
+      node: <SiPrisma className="text-[#0C344B]" />,
       title: "Prisma ORM",
       href: "https://prisma.io",
     },
     {
-      node: <SiNodedotjs />,
+      node: <SiNodedotjs className="text-[#539E43]" />,
       title: "Nodejs",
       href: "https://nodejs.org",
     },
     {
-      node: <SiExpress />,
+      node: <SiExpress className="text-[#ffffff]" />,
       title: "Expressjs",
       href: "https://expressjs.com",
     },
     {
-      node: <SiMysql className="size-10" />,
+      node: <SiMysql className="text-[#00758F]" />,
       title: "MySQL",
       href: "https://mysql.com",
     },
     {
-      node: <SiSpringboot />,
+      node: <SiSpringboot className="text-[#6DB33F]" />,
       title: "SpringBoot",
       href: null,
     },
     {
-      node: <SiMongodb />,
+      node: <SiMongodb className="text-[#47A248]" />,
       title: "MongoDB",
       href: "https://mongodb.com",
     },
-
     {
-      node: <SiGithub />,
+      node: <SiGithub className="text-[#d8d8d8]" />,
       title: "GitHub",
       href: null,
     },
     {
-      node: <SiFigma />,
+      node: <SiFigma className="text-[#A259FF]" />,
       title: "Figma",
       href: null,
     },
     {
-      node: <SiRedis />,
+      node: <SiRedis className="text-[#DC382D]" />,
       title: "Redis",
       href: null,
     },
@@ -130,7 +133,7 @@ const Skills = () => {
   return (
     <>
       <div className="w-full xcenter borderlight">
-        <div className="w-190 max-[750px]:w-full text-white borderlight  p-4 gap-5 ">
+        <div className="w-190 max-[750px]:w-full text-white borderlight p-4 flex flex-col gap-8 ">
           <h1>Skills:</h1>
           <LogoLoop
             className="mt-2 h-fit "
@@ -146,7 +149,7 @@ const Skills = () => {
             ariaLabel="Technology partners"
           />
           <LogoLoop
-            className="mt-2 h-fit "
+            className="h-fit "
             logos={frameWork}
             speed={30}
             direction="left"

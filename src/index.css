@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: sleek;
-    src: url(../public/sleek.ttf);
+    src: url(/sleek.ttf);
 }
 
 * {
