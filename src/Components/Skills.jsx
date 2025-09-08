@@ -26,23 +26,23 @@ import {
 const Skills = () => {
   const techLogos = [
     {
-      node: <SiReact className="text-[#3499ff]" />,
+      node: <SiReact  />,
       title: "React",
       href: "https://react.dev",
     },
     { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
     {
-      node: <SiTypescript className="text-[#3776ff]" />,
+      node: <SiTypescript  />,
       title: "TypeScript",
       href: "https://www.typescriptlang.org",
     },
     {
-      node: <SiTailwindcss className="text-sky-400" />,
+      node: <SiTailwindcss  />,
       title: "Tailwind CSS",
       href: "https://tailwindcss.com",
     },
     {
-      node: <SiJavascript className="text-yellow-300" />,
+      node: <SiJavascript  />,
       title: "JavaScript",
       href: null,
     },
@@ -52,12 +52,12 @@ const Skills = () => {
       href: null,
     },
     {
-      node: <SiOracle className="text-orange-600" />,
+      node: <SiOracle  />,
       title: "JAVA",
       href: null,
     },
     {
-      node: <SiReactrouter className="text-red-400" />,
+      node: <SiReactrouter  />,
       title: "Reactrouter",
       href: null,
     },
@@ -65,47 +65,47 @@ const Skills = () => {
 
   const frameWork = [
     {
-      node: <SiPrisma className="text-[#0C344B]" />,
+      node: <SiPrisma  />,
       title: "Prisma ORM",
       href: "https://prisma.io",
     },
     {
-      node: <SiNodedotjs className="text-[#539E43]" />,
+      node: <SiNodedotjs  />,
       title: "Nodejs",
       href: "https://nodejs.org",
     },
     {
-      node: <SiExpress className="text-[#ffffff]" />,
+      node: <SiExpress  />,
       title: "Expressjs",
       href: "https://expressjs.com",
     },
     {
-      node: <SiMysql className="text-[#00758F]" />,
+      node: <SiMysql  />,
       title: "MySQL",
       href: "https://mysql.com",
     },
     {
-      node: <SiSpringboot className="text-[#6DB33F]" />,
+      node: <SiSpringboot  />,
       title: "SpringBoot",
       href: null,
     },
     {
-      node: <SiMongodb className="text-[#47A248]" />,
+      node: <SiMongodb  />,
       title: "MongoDB",
       href: "https://mongodb.com",
     },
     {
-      node: <SiGithub className="text-[#d8d8d8]" />,
+      node: <SiGithub  />,
       title: "GitHub",
       href: null,
     },
     {
-      node: <SiFigma className="text-[#A259FF]" />,
+      node: <SiFigma  />,
       title: "Figma",
       href: null,
     },
     {
-      node: <SiRedis className="text-[#DC382D]" />,
+      node: <SiRedis  />,
       title: "Redis",
       href: null,
     },
