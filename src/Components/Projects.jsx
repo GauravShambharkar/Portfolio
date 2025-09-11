@@ -1,22 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectPreview from "./ProjectPreview";
+import { MdOnlinePrediction } from "react-icons/md";
+import useStore from "./Global/Store";
 
 const Projects = () => {
-  const project = [
-    {
-      img: "",
-      title: "Backend directory generator",
-      description: "Backend directory generator",
-    },
-    {
-      img: "",
-      title: "Learn lift",
-      description: "Platform, that help explore new learning path",
-    },
-  ];
 
   const [preview, setPreview] = useState(false);
   const [clickedProject, setClickedProject] = useState([]);
+  const projects = useStore((state) => state.projects);
+
+  useEffect(() => {
+    console.log(projects);
+  }, []);
 
   const handlePreview = (item) => {
     setPreview(!preview);
@@ -30,7 +25,7 @@ const Projects = () => {
         <div className="w-190 text-white borderlight p-4 flex flex-col gap-5 ">
           <h1>Projects:</h1>
           <div className=" gap-4 border-white grid grid-cols-2 ">
-            {project.map((items, index) => {
+            {projects.map((items, index) => {
               return (
                 <div
                   key={index}
