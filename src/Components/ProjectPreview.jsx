@@ -17,7 +17,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
           <div className="flex justify-between">
             <div className="text-sm">
               <h3 className="text-white">{project.title}</h3>
-              <h5 className="txtgray">{project.description}</h5>
+              <h5 className="txtgray  ">{project.description}</h5>
             </div>
             <a className=" text-white text-sm flex gap-1" href="">
               Live{project.live}

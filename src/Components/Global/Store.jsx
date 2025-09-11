@@ -20,6 +20,15 @@ const useStore = create((set) => ({
       liveLink: "",
       description: "Platform, that help explore new learning path",
     },
+    {
+      img: "",
+      title: "Multi tech-stack Backend directory generator",
+      link: "https://github.com/GauravShambharkar/Multi-techStack-backend-directory-Generator",
+      live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
+      liveLink: "",
+      description:
+        "just like waht NEM does it it create an directory and folder with customised fileName but here you can use any .exe for your file .java, .js, .ts, .py, .c any, creating custom backend directory where this project can ease the process of creating directories and files for the Node, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
+    },
   ],
 }));
 
