@@ -4,7 +4,6 @@ import { MdOnlinePrediction } from "react-icons/md";
 import useStore from "./Global/Store";
 
 const Projects = () => {
-
   const [preview, setPreview] = useState(false);
   const [clickedProject, setClickedProject] = useState([]);
   const projects = useStore((state) => state.projects);
@@ -24,19 +23,24 @@ const Projects = () => {
       <div className="w-full xcenter borderlight relative">
         <div className="w-190 text-white borderlight p-4 flex flex-col gap-5 ">
           <h1>Projects:</h1>
-          <div className=" gap-4 border-white grid grid-cols-2 ">
+          <div className=" gap-4 border-white grid grid-cols-2 max-[700px]:grid-cols-1 ">
             {projects.map((items, index) => {
               return (
                 <div
                   key={index}
                   onClick={() => handlePreview(items)}
-                  className="border cursor-pointer border-[#696969] p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
+                  className="border cursor-pointer border-[#414141] p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
                   <img
-                    src="humanWare.jpg"
+                    src={items.img || null}
                     alt=""
-                    className="w-full rounded-xl "
+                    className={
+                      items.img
+                        ? "w-full rounded-xl"
+                        : "w-full h-full rounded-xl "
+                    }
                   />
+
                   <div className="">
                     <h3>{items.title}</h3>
                     <h5 className="txtgray">

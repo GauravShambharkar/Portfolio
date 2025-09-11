@@ -9,10 +9,18 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className="border border-[#6f6f6f] cursor-pointer w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 "
+          className="border border-[#414141] cursor-pointer w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 "
         >
           <a target="_blank" href={project.link}>
-            <img src="humanWare.jpg" alt="" className="w-full rounded-xl " />
+            <img
+              src={project.img}
+              alt=""
+              className={
+                project.img
+                  ? "w-full rounded-xl"
+                  : "w-full h-full rounded-xl bg-[#414141]"
+              }
+            />
           </a>
           <div className="flex justify-between">
             <div className="text-sm">

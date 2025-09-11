@@ -4,7 +4,7 @@ import { create } from "zustand";
 const useStore = create((set) => ({
   projects: [
     {
-      img: "",
+      img: "backendDirectorygeneratorImg.jpg",
       title: "Backend directory generator",
       link: "https://github.com/GauravShambharkar/Nodejs-Backend-Directory-Generator",
       live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
@@ -13,7 +13,7 @@ const useStore = create((set) => ({
         "Node js backend directory generator, creating custom backend directory where this project can ease the process of creating directories and files for the Node, Express And MongoDB, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
     },
     {
-      img: "",
+      img: "learnLift.png",
       title: "Learn lift",
       link: "https://github.com/GauravShambharkar/LearnLift",
       live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
@@ -21,7 +21,7 @@ const useStore = create((set) => ({
       description: "Platform, that help explore new learning path",
     },
     {
-      img: "",
+      img: "MulitbackendDirectorygeneratorImg.jpg",
       title: "Multi tech-stack Backend directory generator",
       link: "https://github.com/GauravShambharkar/Multi-techStack-backend-directory-Generator",
       live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
