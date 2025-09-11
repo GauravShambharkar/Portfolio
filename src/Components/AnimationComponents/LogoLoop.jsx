@@ -376,7 +376,7 @@ export const LogoLoop = memo(
 
         <div
           className={cx(
-            "flex w-max will-change-transform select-none",
+            "flex w-max will-change-transform select-none ",
             "motion-reduce:transform-none"
           )}
           ref={trackRef}

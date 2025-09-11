@@ -6,7 +6,7 @@ import github from "react-useanimations/lib/github";
 const Nav = () => {
   return (
     <>
-      <div className="w-full borderlight xcenter fixed top-0 ">
+      <div className="w-full borderlight xcenter fixed top-0 z-50">
         <div className="w-190 h-12 bg-black borderlight text-[14px] ycenter px-2 xcenter gap-2  xbetween text-white ">
           <a href="">logo</a>
           <div className="flex gap-2 font-light ">

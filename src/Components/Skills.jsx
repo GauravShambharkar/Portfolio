@@ -136,7 +136,7 @@ const Skills = () => {
         <div className="w-190 max-[750px]:w-full text-white borderlight p-4 flex flex-col gap-8 ">
           <h1>Skills:</h1>
           <LogoLoop
-            className="mt-2 h-fit "
+            className="h-fit "
             logos={techLogos}
             speed={30}
             direction="right"
