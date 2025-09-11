@@ -7,6 +7,7 @@ import Details from "./Components/Details";
 import Socials from "./Components/Socials";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -22,10 +23,11 @@ function App() {
         <Nav />
         <Header />
         <Profile />
-        <Details/>
-        <Socials/>
-        <About/>
-        <Skills/>
+        <Details />
+        <Socials />
+        <About />
+        <Skills />
+        <Projects />
       </div>
     </>
   );

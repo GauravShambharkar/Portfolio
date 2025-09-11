@@ -5,7 +5,7 @@ const About = () => {
     <>
       <div className="w-full xcenter borderlight">
         <div className="w-190 text-white flex-col borderlight flex p-4 gap-3 ">
-          <h1 className="text-lg font-semibold">About: </h1>
+          <h1 className="text-md font-medium">About: </h1>
           <h1 className="text-justify txtgray text-sm">
             Hello, World! I am Gaurav — a Design Engineer passionate about
             creating high-performance, user-centric software solutions with

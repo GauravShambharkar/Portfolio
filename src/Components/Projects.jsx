@@ -1,0 +1,71 @@
+import React, { useState } from "react";
+import ProjectPreview from "./ProjectPreview";
+
+const Projects = () => {
+  const project = [
+    {
+      img: "",
+      title: "Backend directory generator",
+      description: "Backend directory generator",
+    },
+    {
+      img: "",
+      title: "Learn lift",
+      description: "Platform, that help explore new learning path",
+    },
+  ];
+
+  const [preview, setPreview] = useState(false);
+  const [clickedProject, setClickedProject] = useState([]);
+
+  const handlePreview = (item) => {
+    setPreview(!preview);
+    setClickedProject(item);
+    console.log("clicked");
+  };
+
+  return (
+    <>
+      <div className="w-full xcenter borderlight relative">
+        <div className="w-190 text-white borderlight p-4 flex flex-col gap-5 ">
+          <h1>Projects:</h1>
+          <div className=" gap-4 border-white grid grid-cols-2 ">
+            {project.map((items, index) => {
+              return (
+                <div
+                  key={index}
+                  onClick={() => handlePreview(items)}
+                  className="border cursor-pointer border-[#696969] p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
+                >
+                  <img
+                    src="public\humanWare.jpg"
+                    alt=""
+                    className="w-full rounded-xl "
+                  />
+                  <div className="">
+                    <h3>{items.title}</h3>
+                    <h5 className="txtgray">
+                      {items.description.length > 40
+                        ? items.description.slice(0, 40)
+                        : items.description}
+                      ...
+                    </h5>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        {preview && (
+          <ProjectPreview
+            project={clickedProject}
+            setPreview={setPreview}
+            preview={preview}
+          />
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Projects;
