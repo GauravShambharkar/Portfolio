@@ -5,7 +5,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
     <>
       <div
         onClick={() => setPreview(!preview)}
-        className="w-full h-screen fixed top-0 right-0 bg-[#0000009d] allcenter"
+        className="w-full h-screen fixed top-0 right-0 bg-[#0000009d] allcenter z-60 "
       >
         <div
           onClick={(e) => e.stopPropagation()}
