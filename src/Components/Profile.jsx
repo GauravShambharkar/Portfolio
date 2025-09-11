@@ -8,7 +8,7 @@ const Profile = () => {
           <div className="w-52 h-full borderlight">
             <a href="" className="w-full allcenter ">
               <img
-                src="public\berserk.jpg"
+                src="berserk.jpg"
                 alt=""
                 className="w-fill rounded-full object-fill "
               />
