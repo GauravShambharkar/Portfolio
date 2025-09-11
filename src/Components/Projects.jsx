@@ -38,7 +38,7 @@ const Projects = () => {
                   className="border cursor-pointer border-[#696969] p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
                   <img
-                    src="public\humanWare.jpg"
+                    src="humanWare.jpg"
                     alt=""
                     className="w-full rounded-xl "
                   />

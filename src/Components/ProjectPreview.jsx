@@ -9,7 +9,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
       >
         <div className="border border-[#6f6f6f] w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 ">
           <img
-            src="public\humanWare.jpg"
+            src="humanWare.jpg"
             alt=""
             className="w-full rounded-xl "
           />
