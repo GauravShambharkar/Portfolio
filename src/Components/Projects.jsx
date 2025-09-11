@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProjectPreview from "./ProjectPreview";
 import { MdOnlinePrediction } from "react-icons/md";
 import useStore from "./Global/Store";
+import { Github } from "lucide-react";
 
 const Projects = () => {
   const [preview, setPreview] = useState(false);
@@ -41,14 +42,17 @@ const Projects = () => {
                     }
                   />
 
-                  <div className="">
-                    <h3>{items.title}</h3>
-                    <h5 className="txtgray">
-                      {items.description.length > 40
-                        ? items.description.slice(0, 40)
-                        : items.description}
-                      ...
-                    </h5>
+                  <div className="flex justify-between ycenter">
+                    <div className="">
+                      <h3>{items.title}</h3>
+                      <h5 className="txtgray">
+                        {items.description.length > 40
+                          ? items.description.slice(0, 40)
+                          : items.description}
+                        ...
+                      </h5>
+                    </div>
+                    <Github className="size-4" />
                   </div>
                 </div>
               );
