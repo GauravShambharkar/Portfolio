@@ -8,7 +8,11 @@ const Nav = () => {
     <>
       <div className="w-full  xcenter fixed top-0 z-50">
         <div className="w-190 h-12 bg-[#09090B] borderb text-[14px] ycenter px-2 xcenter gap-2  xbetween text-white ">
-          <a href="">logo</a>
+          <h1
+            className="bg-gradient-to-b  from-[#ffffff]  to-[#686868] font-bold bg-clip-text text-transparent"
+          >
+            Gv
+          </h1>
           <div className="flex gap-2 font-light ">
             <a
               target="_blank"

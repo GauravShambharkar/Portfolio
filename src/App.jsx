@@ -8,6 +8,7 @@ import Socials from "./Components/Socials";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
+import Outro from "./Components/Outro";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Outro/>
       </div>
     </>
   );
