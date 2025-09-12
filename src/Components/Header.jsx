@@ -4,8 +4,8 @@ import CurvedLoop from "../Components/AnimationComponents/CurvedLoop";
 const Header = () => {
   return (
     <>
-      <div className="w-full h-62 borderlight xcenter mt-12 ">
-        <div className="w-190 px-2  allcenter text-[14px] borderlight overflow-hidden">
+      <div className="w-full h-62  xcenter mt-12 ">
+        <div className="w-190 px-2  allcenter text-[14px] overflow-hidden">
           {/* <a href="" className="text-white">
             Some logo
           </a> */}

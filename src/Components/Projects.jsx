@@ -21,8 +21,8 @@ const Projects = () => {
 
   return (
     <>
-      <div className="w-full xcenter borderlight relative">
-        <div className="w-190 text-white borderlight p-4 flex flex-col gap-5 ">
+      <div className="w-full xcenter  relative">
+        <div className="w-190 text-white borderb p-4 flex flex-col gap-5 ">
           <h1>Projects:</h1>
           <div className=" gap-4 border-white grid grid-cols-2 max-[700px]:grid-cols-1 ">
             {projects.map((items, index) => {

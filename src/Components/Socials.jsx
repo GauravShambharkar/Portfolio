@@ -1,5 +1,6 @@
 import { Github, Linkedin, MoveUpRight, X } from "lucide-react";
 import React from "react";
+import useStore from "./Global/Store";
 
 const Socials = () => {
   const [socials, setSocials] = React.useState([
@@ -23,16 +24,18 @@ const Socials = () => {
     },
   ]);
 
+  // const {socials} = useStore(store=>store.socials)
+
   return (
     <>
-      <div className="w-full borderlight xcenter  ">
-        <div className="w-190 p-4 grid grid-cols-2 grid-rows-2 gap-5 text-[14px] borderlight text-white max-[750px]:grid-cols-1">
+      <div className="w-full  xcenter  ">
+        <div className="w-190 p-4 grid grid-cols-2 grid-rows-2 gap-5 text-[14px] borderb text-white max-[750px]:grid-cols-1">
           {socials.map((item, index) => {
             return (
               <div
                 onClick={() => window.open(item.profileurl, "_blank")}
                 key={index}
-                className=" flex justify-between ycenter cursor-pointer border p-2 border-[#bdbdbd7e] rounded-2xl "
+                className=" flex justify-between ycenter cursor-pointer border p-2 border-[#464646] rounded-2xl "
               >
                 <div className="flex gap-2 yend p-1">
                   <img

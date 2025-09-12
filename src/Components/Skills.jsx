@@ -132,15 +132,15 @@ const Skills = () => {
 
   return (
     <>
-      <div className="w-full xcenter borderlight">
-        <div className="w-190 max-[750px]:w-full text-white borderlight p-4 flex flex-col gap-8 ">
+      <div className="w-full xcenter ">
+        <div className="w-190 max-[750px]:w-full text-white borderb p-4 flex flex-col gap-8 ">
           <h1>Skills:</h1>
           <LogoLoop
             className="h-fit "
             logos={techLogos}
             speed={30}
             direction="right"
-            logoHeight={35}
+            logoHeight={25}
             gap={40}
             pauseOnHover
             // scaleOnHover
@@ -153,7 +153,7 @@ const Skills = () => {
             logos={frameWork}
             speed={30}
             direction="left"
-            logoHeight={35}
+            logoHeight={25}
             gap={40}
             pauseOnHover
             // scaleOnHover

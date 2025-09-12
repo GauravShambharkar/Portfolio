@@ -47,8 +47,8 @@ const Details = () => {
 
   return (
     <>
-      <div className="w-full border border-white xcenter">
-        <div className="w-190 p-4 flex flex-col gap-2 border border-white text-white">
+      <div className="w-full  xcenter">
+        <div className="w-190 p-4 flex flex-col gap-2 borderb text-white">
           {data.map((items, index) => {
             return (
               <div key={index} className="flex gap-2 ycenter ">

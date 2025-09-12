@@ -3,8 +3,8 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <div className="w-full xcenter borderlight">
-        <div className="w-190 text-white flex-col borderlight flex p-4 gap-3 ">
+      <div className="w-full xcenter ">
+        <div className="w-190 text-white flex-col borderb flex p-4 gap-3 ">
           <h1 className="text-md font-medium">About: </h1>
           <h1 className="text-justify txtgray text-sm">
             Hello, World! I am Gaurav — a Design Engineer passionate about

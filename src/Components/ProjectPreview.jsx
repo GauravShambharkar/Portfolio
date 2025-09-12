@@ -7,9 +7,10 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
         onClick={() => setPreview(!preview)}
         className="w-full h-screen fixed top-0 right-0 bg-[#0000009d] allcenter z-60 "
       >
+        {/* card */}
         <div
           onClick={(e) => e.stopPropagation()}
-          className="border border-[#414141] cursor-pointer w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 "
+          className="border border-[#414141]  w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 max-[700px]:w-100 "
         >
           <a target="_blank" href={project.link}>
             <img
@@ -27,9 +28,18 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
               <h3 className="text-white">{project.title}</h3>
               <h5 className="txtgray  ">{project.description}</h5>
             </div>
-            <a className=" text-white text-sm flex gap-1" href="">
+            <a className=" text-white text-sm flex gap-1" href={project.link}>
               Live{project.live}
             </a>
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            {project.projectStack.map((items, index) => {
+              return (
+                <h3 className="text-white hover:bg-[#3c3c3c] transition-all ease-in-out duration-300 inset-shadow-gray-200 inset-shadow-xs px-2 py-1 rounded-lg text-[11px] bg-[#2e2e2e] ">
+                  {items}
+                </h3>
+              );
+            })}
           </div>
         </div>
       </div>
