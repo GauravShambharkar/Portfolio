@@ -7,17 +7,17 @@ const Nav = () => {
   return (
     <>
       <div className="w-full  xcenter fixed top-0 z-50">
-        <div className="w-190 h-12 bg-[#09090B] borderb text-[14px] ycenter px-2 xcenter gap-2  xbetween text-white ">
+        <div className="w-190 h-12 bg-[#09090B] borderb text-xl ycenter px-2 xcenter gap-2  xbetween text-white ">
           <h1
             className="bg-gradient-to-b  from-[#ffffff]  to-[#686868] font-bold bg-clip-text text-transparent"
           >
-            Gv
+            Gv.
           </h1>
           <div className="flex gap-2 font-light ">
             <a
               target="_blank"
               href="https://github.com/GauravShambharkar"
-              className="border p-1 hover:bg-[#4b4b4b] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#6b6b6b]"
+              className="border p-1.5 hover:bg-[#4b4b4b] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#6b6b6b]"
             >
               <Github className="lucide_icon" />
             </a>
@@ -27,7 +27,7 @@ const Nav = () => {
             <a
               target="_blank"
               href="https://www.linkedin.com/in/gauravsjobprofile/"
-              className="border p-1 hover:bg-[#4b4b4b] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#6b6b6b] "
+              className="border p-1.5 hover:bg-[#4b4b4b] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#6b6b6b] "
             >
               <Linkedin className="lucide_icon" />
             </a>
