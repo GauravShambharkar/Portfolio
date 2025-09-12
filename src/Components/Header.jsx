@@ -10,12 +10,12 @@ const Header = () => {
             Some logo
           </a> */}
           <CurvedLoop
-            marqueeText="✦ Hire ME😭"
+            marqueeText="✦ glad you're here"
             speed={1}
             curveAmount={500}
             direction="right"
             interactive={true}
-            className="custom-text-style"
+            className="custom-text-style font-thin"
           />
         </div>
       </div>
