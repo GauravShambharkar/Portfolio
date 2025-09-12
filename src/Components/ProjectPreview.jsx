@@ -5,12 +5,12 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
     <>
       <div
         onClick={() => setPreview(!preview)}
-        className="w-full h-screen fixed top-0 right-0 bg-[#0000009d] allcenter z-60 "
+        className="w-full h-full fixed top-0 right-0 bg-[#0000009d] allcenter z-60 "
       >
         {/* card */}
         <div
           onClick={(e) => e.stopPropagation()}
-          className="border border-[#414141]  w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 max-[700px]:w-100 "
+          className="border border-[#414141]  w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 max-[700px]:w-95 "
         >
           <a target="_blank" href={project.link}>
             <img
