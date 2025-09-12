@@ -17,7 +17,7 @@ const Nav = () => {
             <a
               target="_blank"
               href="https://github.com/GauravShambharkar"
-              className="border p-1.5 hover:bg-[#4b4b4b] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#6b6b6b]"
+              className="border p-1.5 hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
             >
               <Github className="lucide_icon" />
             </a>
@@ -27,7 +27,7 @@ const Nav = () => {
             <a
               target="_blank"
               href="https://www.linkedin.com/in/gauravsjobprofile/"
-              className="border p-1.5 hover:bg-[#4b4b4b] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#6b6b6b] "
+              className="border p-1.5 hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c] "
             >
               <Linkedin className="lucide_icon" />
             </a>
