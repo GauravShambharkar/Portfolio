@@ -30,7 +30,7 @@ const Projects = () => {
                 <div
                   key={index}
                   onClick={() => handlePreview(items)}
-                  className="border cursor-pointer border-[#414141] p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
+                  className="border-[#323232] border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
                   <img
                     src={items.img || null}
