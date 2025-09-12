@@ -1,4 +1,5 @@
 import React from "react";
+import ShinyText from "./AnimationComponents/ShinyText";
 
 const ProjectPreview = ({ setPreview, preview, project }) => {
   return (
@@ -13,22 +14,34 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
           className="border border-[#414141]  w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 max-[700px]:w-95 "
         >
           <a target="_blank" href={project.link}>
-            <img
-              src={project.img}
-              alt=""
-              className={
-                project.img
-                  ? "w-full rounded-xl"
-                  : "w-full h-full rounded-xl bg-[#414141]"
-              }
-            />
+            {project.img ? (
+              <img
+                src={project.img}
+                alt=""
+                className={
+                  project.img
+                    ? "w-full rounded-xl"
+                    : "w-full h-full rounded-xl bg-[#414141]"
+                }
+              />
+            ) : (
+              <div className="w-full h-70 rounded-xl bg-[#414141] allcenter text-sm text-white">
+                <ShinyText
+                  text={"Currently, no image available."}
+                  className="text-[#393939]"
+                />
+              </div>
+            )}
           </a>
           <div className="flex justify-between">
             <div className="text-sm">
               <h3 className="text-white">{project.title}</h3>
               <h5 className="txtgray  ">{project.description}</h5>
             </div>
-            <a className=" text-white text-sm flex gap-1" href={project.link}>
+            <a
+              className="h-fit text-white text-sm flex gap-1"
+              href={project.link}
+            >
               Live{project.live}
             </a>
           </div>

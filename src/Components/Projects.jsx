@@ -3,6 +3,7 @@ import ProjectPreview from "./ProjectPreview";
 import { MdOnlinePrediction } from "react-icons/md";
 import useStore from "./Global/Store";
 import { Github } from "lucide-react";
+import ShinyText from "./AnimationComponents/ShinyText";
 
 const Projects = () => {
   const [preview, setPreview] = useState(false);
@@ -32,15 +33,24 @@ const Projects = () => {
                   onClick={() => handlePreview(items)}
                   className="border-[#323232] border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
-                  <img
-                    src={items.img || null}
-                    alt=""
-                    className={
-                      items.img
-                        ? "w-full rounded-xl"
-                        : "w-full h-full rounded-xl "
-                    }
-                  />
+                  {items.img ? (
+                    <img
+                      src={items.img || null}
+                      alt=""
+                      className={
+                        items.img
+                          ? "w-full rounded-xl"
+                          : "w-full h-full rounded-xl "
+                      }
+                    />
+                  ) : (
+                    <div className="w-full h-full rounded-xl bg-[#414141] allcenter text-sm text-white">
+                      <ShinyText
+                        text={"Currently, no image available."}
+                        className="text-[#aaaaaa]"
+                      />
+                    </div>
+                  )}
 
                   <div className="flex justify-between ycenter">
                     <div className="">
