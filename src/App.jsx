@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen">
+      <div className="w-full h-screen  ">
         {/* <RemoveScrollBar/> */}
         <ReactLenis root />
         <Nav />
@@ -29,7 +29,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        <Outro/>
+        <Outro />
       </div>
     </>
   );

@@ -5,12 +5,12 @@ const Header = () => {
   return (
     <>
       <div className="w-full h-62  xcenter mt-12 ">
-        <div className="w-190 px-2  allcenter text-[14px] overflow-hidden">
+        <div className="w-190 px-2 allcenter text-[14px] overflow-hidden">
           {/* <a href="" className="text-white">
             Some logo
           </a> */}
           <CurvedLoop
-            marqueeText="✦ Hire ME😭✦"
+            marqueeText="✦ Hire ME😭"
             speed={1}
             curveAmount={500}
             direction="right"
