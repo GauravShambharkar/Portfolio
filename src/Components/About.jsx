@@ -20,8 +20,7 @@ const About = () => {
             <br />
             <br />
             <span className="text-[#e0e0e0] ">
-
-            Some of my projects include:
+              Some of my projects include:
             </span>
             <br />
             Movie Streaming Platform – built with React, Tailwind CSS, Redux,

@@ -1,5 +1,6 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, MessageCircleMoreIcon } from "lucide-react";
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import UseAnimations from "react-useanimations";
 import github from "react-useanimations/lib/github";
 
@@ -12,23 +13,31 @@ const Nav = () => {
             Gv.
           </h1>
           <div className="flex gap-2 font-light ">
-            <a
+            {/* <a
               target="_blank"
               href="https://github.com/GauravShambharkar"
               className="border p-1.5 hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
             >
               <Github className="lucide_icon" />
+            </a> */}
+            <a
+              target="_blank"
+              href="https://wa.me/918261050623"
+              className="border p-1.5 hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
+            >
+              {/* <MessageCircleMoreIcon className="lucide_icon" /> */}
+              <FaWhatsapp className="lucide_icon" />
             </a>
             {/* <div className="bg-white allcenter p-1">
               <UseAnimations animation={github} />
             </div> */}
-            <a
+            {/* <a
               target="_blank"
               href="https://www.linkedin.com/in/gauravsjobprofile/"
               className="border p-1.5 hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c] "
             >
               <Linkedin className="lucide_icon" />
-            </a>
+            </a> */}
             {/* <a href="" className="">
               theme
             </a> */}

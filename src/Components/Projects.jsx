@@ -34,7 +34,7 @@ const Projects = () => {
                   className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
                   {items.img ? (
-                    <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-50 " >
+                    <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-46 ">
                       <img
                         src={items.img || null}
                         alt=""
