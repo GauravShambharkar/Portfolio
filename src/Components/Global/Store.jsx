@@ -7,7 +7,7 @@ const useStore = create((set) => ({
       img: "backendDirectorygeneratorImg.jpg",
       title: "Backend directory generator",
       link: "https://github.com/GauravShambharkar/Nodejs-Backend-Directory-Generator",
-      live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
+      live: false,
       liveLink: "",
       projectStack: [
         "ReactJs",
@@ -25,7 +25,7 @@ const useStore = create((set) => ({
       img: "learnLift.png",
       title: "Learn lift",
       link: "https://github.com/GauravShambharkar/LearnLift",
-      live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
+      live: false,
       liveLink: "",
       projectStack: [
         "ReactJs",
@@ -44,7 +44,7 @@ const useStore = create((set) => ({
       img: "MulitbackendDirectorygeneratorImg.jpg",
       title: "Multi tech-stack Backend directory generator",
       link: "https://github.com/GauravShambharkar/Multi-techStack-backend-directory-Generator",
-      live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
+      live: false,
       liveLink: "",
       projectStack: [
         "ReactJs",
@@ -61,17 +61,15 @@ const useStore = create((set) => ({
     {
       img: "",
       title: "My portfolio",
-      link: "https://github.com/GauravShambharkar/Multi-techStack-backend-directory-Generator",
+      link: "https://github.com/GauravShambharkar/Portfolio",
       live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
       liveLink: "",
       projectStack: [
         "ReactJs",
         "TailwindCSS",
-        "ShadCn",
-        "Express",
-        "Nodejs",
-        "Fs-extra",
-        "Archiver",
+        "ReactBits",
+        "GSAP",
+        "ReactMotion",
       ],
       description:
         "just like waht NEM does it it create an directory and folder with customised fileName but here you can use any .exe for your file .java, .js, .ts, .py, .c any, creating custom backend directory where this project can ease the process of creating directories and files for the Node, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",

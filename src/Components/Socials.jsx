@@ -29,31 +29,34 @@ const Socials = () => {
   return (
     <>
       <div className="w-full  xcenter  ">
-        <div className="w-190 p-4 grid grid-cols-2 grid-rows-2 gap-5 text-[14px] borderb text-white max-[750px]:grid-cols-1">
-          {socials.map((item, index) => {
-            return (
-              <div
-                onClick={() => window.open(item.profileurl, "_blank")}
-                key={index}
-                className=" flex justify-between ycenter cursor-pointer border p-2 border-[#464646] rounded-2xl "
-              >
-                <div className="flex gap-2 yend p-1">
-                  <img
-                    src={item.logo}
-                    alt={item.platform}
-                    className="size-11 cursor-pointer allcenter"
-                  />
-                  <div className="flex flex-col ">
-                    <h1 className="cursor-pointer hover:underline">
-                      {item.platform}
-                    </h1>
-                    <h1 className="txtgray">{item.username}</h1>
+        <div className="w-190 p-4 flex flex-col borderb">
+          <h1 className="text-md font-medium text-white">Socials: </h1>
+          <div className="grid py-4 grid-cols-2 grid-rows-2 gap-5 text-[14px]  text-white max-[750px]:grid-cols-1">
+            {socials.map((item, index) => {
+              return (
+                <div
+                  onClick={() => window.open(item.profileurl, "_blank")}
+                  key={index}
+                  className=" flex justify-between ycenter cursor-pointer border p-2 border-[#464646] rounded-2xl "
+                >
+                  <div className="flex gap-2 yend p-1">
+                    <img
+                      src={item.logo}
+                      alt={item.platform}
+                      className="size-11 cursor-pointer allcenter"
+                    />
+                    <div className="flex flex-col ">
+                      <h1 className="cursor-pointer hover:underline">
+                        {item.platform}
+                      </h1>
+                      <h1 className="txtgray">{item.username}</h1>
+                    </div>
                   </div>
+                  <MoveUpRight className="size-4" />
                 </div>
-                <MoveUpRight className="size-4" />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

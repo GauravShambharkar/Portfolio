@@ -31,20 +31,23 @@ const Projects = () => {
                 <div
                   key={index}
                   onClick={() => handlePreview(items)}
-                  className="border-[#323232] border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
+                  className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
                   {items.img ? (
-                    <img
-                      src={items.img || null}
-                      alt=""
-                      className={
-                        items.img
-                          ? "w-full rounded-xl"
-                          : "w-full h-full rounded-xl "
-                      }
-                    />
+                    <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-50 " >
+                      <img
+                        src={items.img || null}
+                        alt=""
+                        className={
+                          items.img
+                            ? "w-full h-full rounded-xl"
+                            : "w-full h-full rounded-xl bg-gray-900 "
+                        }
+                      />
+                    </span>
                   ) : (
-                    <div className="w-full h-full rounded-xl bg-[#414141] allcenter text-sm text-white">
+                    // card 4th
+                    <div className="w-full h-46 rounded-xl bg-[#414141] allcenter text-sm text-white ">
                       <ShinyText
                         text={"Currently, no image available."}
                         className="text-[#aaaaaa]"

@@ -15,17 +15,19 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
         >
           <a target="_blank" href={project.link}>
             {project.img ? (
-              <img
-                src={project.img}
-                alt=""
-                className={
-                  project.img
-                    ? "w-full rounded-xl"
-                    : "w-full h-full rounded-xl bg-[#414141]"
-                }
-              />
+              <span className="w-full h-66">
+                <img
+                  src={project.img}
+                  alt=""
+                  className={
+                    project.img
+                      ? "w-full rounded-xl"
+                      : "w-full h-full rounded-xl bg-[#414141]"
+                  }
+                />
+              </span>
             ) : (
-              <div className="w-full h-70 rounded-xl bg-[#414141] allcenter text-sm text-white">
+              <div className="w-full h-76 rounded-xl bg-[#414141] allcenter text-sm text-white">
                 <ShinyText
                   text={"Currently, no image available."}
                   className="text-[#393939]"
@@ -38,12 +40,14 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
               <h3 className="text-white">{project.title}</h3>
               <h5 className="txtgray  ">{project.description}</h5>
             </div>
-            <a
-              className="h-fit text-white text-sm flex gap-1"
-              href={project.link}
-            >
-              Live{project.live}
-            </a>
+            {project.live && (
+              <a
+                className="h-fit text-white text-sm flex gap-1"
+                href={project.link}
+              >
+                Live{project.live}
+              </a>
+            )}
           </div>
           <div className="flex gap-2 flex-wrap">
             {project.projectStack.map((items, index) => {
