@@ -81,7 +81,7 @@ body {
 }
 
 .lucide_icon {
-    @apply text-[#ffffff] size-4;
+    @apply text-[#59ff59] size-4;
 }
 
 .txtgray {
