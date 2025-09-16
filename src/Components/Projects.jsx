@@ -34,7 +34,7 @@ const Projects = () => {
                   className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
                   {items.img ? (
-                    <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-66 max-[459px]:h-52 max-[410px]:h-46">
+                    <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46">
                       <img
                         src={items.img || null}
                         alt=""
@@ -47,7 +47,7 @@ const Projects = () => {
                     </span>
                   ) : (
                     // card 4th
-                    <div className="w-full h-46 rounded-xl bg-[#414141] allcenter text-sm text-white ">
+                    <div className="w-full h-46 rounded-xl bg-[#414141] allcenter text-sm text-white max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46 ">
                       <ShinyText
                         text={"Currently, no image available."}
                         className="text-[#aaaaaa]"
