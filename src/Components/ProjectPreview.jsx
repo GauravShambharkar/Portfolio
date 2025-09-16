@@ -1,5 +1,6 @@
 import React from "react";
 import ShinyText from "./AnimationComponents/ShinyText";
+import { Github } from "lucide-react";
 
 const ProjectPreview = ({ setPreview, preview, project }) => {
   return (
@@ -52,12 +53,18 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
           <div className="flex gap-2 flex-wrap">
             {project.projectStack.map((items, index) => {
               return (
-                <h3 className="text-white hover:bg-[#3c3c3c] transition-all ease-in-out duration-300 inset-shadow-gray-200 inset-shadow-xs px-2 py-1 rounded-lg text-[11px] bg-[#2e2e2e] ">
+                <h3 key={index} className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-200 inset-shadow-xs px-2 py-1 rounded-lg text-[11px] bg-[#1a1a1a] ">
                   {items}
                 </h3>
               );
             })}
           </div>
+          <a href={project.link}>
+            <button className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1.5 cursor-pointer rounded-lg text-[11px] bg-[#1a1a1a] w-fit flex gap-2 items-center ">
+              Visit Repositotry
+              <Github className="size-3.5" />
+            </button>
+          </a>
         </div>
       </div>
     </>

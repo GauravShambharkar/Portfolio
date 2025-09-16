@@ -18,9 +18,9 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen  ">
-        {/* <RemoveScrollBar/> */}
+      <div className="w-full h-screen relative">
         <ReactLenis root />
+        {/* <RemoveScrollBar/> */}
         <Nav />
         <Header />
         <Profile />
