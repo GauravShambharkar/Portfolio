@@ -53,14 +53,17 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
           <div className="flex gap-2 flex-wrap">
             {project.projectStack.map((items, index) => {
               return (
-                <h3 key={index} className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-200 inset-shadow-xs px-2 py-1 rounded-lg text-[11px] bg-[#1a1a1a] ">
+                <h3
+                  key={index}
+                  className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-200 inset-shadow-xs px-2 py-1 rounded-lg text-[11px] bg-[#1a1a1a] "
+                >
                   {items}
                 </h3>
               );
             })}
           </div>
-          <a href={project.link}>
-            <button className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1.5 cursor-pointer rounded-lg text-[11px] bg-[#1a1a1a] w-fit flex gap-2 items-center ">
+          <a target="_blank" href={project.link} className="w-fit">
+            <button className="text-white cursor-pointer hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1.5 rounded-lg text-[11px] bg-[#1a1a1a] w-fit flex gap-2 items-center ">
               Visit Repositotry
               <Github className="size-3.5" />
             </button>
