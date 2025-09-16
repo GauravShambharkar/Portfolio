@@ -57,7 +57,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
               return (
                 <h3
                   key={index}
-                  className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-200 inset-shadow-xs px-2 py-1 rounded-lg text-[11px] bg-[#1a1a1a] "
+                  className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-200 inset-shadow-sm px-2 py-1 rounded-lg text-[11px] bg-[#1a1a1a] "
                 >
                   {items}
                 </h3>
