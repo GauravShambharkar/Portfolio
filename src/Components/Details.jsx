@@ -68,8 +68,8 @@ const Details = () => {
         <div className="w-190 p-4 flex flex-col gap-2 borderb text-white">
           {data.map((items, index) => {
             return (
-              <div key={index} className="flex gap-2 ycenter ">
-                <div className="detail_icon_parent">
+              <div key={index} className="gap-2  ycenter ">
+                <div className="detail_icon_parent flex-shrink-0">
                   <span>{items.icon}</span>
                 </div>
                 <h1 className="text-sm">{items.text}</h1>
