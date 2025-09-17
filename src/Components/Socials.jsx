@@ -22,6 +22,13 @@ const Socials = () => {
       platform: "X",
       profileurl: "https://x.com/Gv4Real",
     },
+    {
+      logo: null,
+      username: null,
+      platform: null,
+      profileurl: null,
+      bg: "inouske.gif",
+    },
   ]);
 
   // const {socials} = useStore(store=>store.socials)
@@ -31,19 +38,34 @@ const Socials = () => {
       <div className="w-full  xcenter  ">
         <div className="w-190 p-4 flex flex-col borderb">
           <h1 className="text-md font-medium text-white">Socials: </h1>
-          <div className="grid py-4 grid-cols-2 grid-rows-2 gap-5 text-[14px]  text-white max-[750px]:grid-cols-1">
+          <div className="grid py-4 grid-cols-2 grid-rows-2 gap-5 text-[14px] text-white max-[750px]:grid-cols-1">
             {socials.map((item, index) => {
               return (
                 <div
                   onClick={() => window.open(item.profileurl, "_blank")}
                   key={index}
-                  className=" flex justify-between ycenter cursor-pointer border p-2 border-[#464646] rounded-2xl "
+                  className={
+                    !item.logo
+                      ? "flex justify-between ycenter cursor-pointer p-2 rounded-2xl hide-on-mobile"
+                      : "flex justify-between ycenter cursor-pointer border p-2 border-[#464646] rounded-2xl"
+                  }
+                  style={
+                    !item.logo && item.bg
+                      ? {
+                          backgroundImage: `url(${item.bg})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center -105px",
+                          width: "100%",
+                          height: "100%",
+                        }
+                      : {}
+                  }
                 >
                   <div className="flex gap-2 yend p-1">
                     <img
                       src={item.logo}
                       alt={item.platform}
-                      className="size-11 cursor-pointer allcenter"
+                      className={!item.logo ? null : "size-11 allcenter"}
                     />
                     <div className="flex flex-col ">
                       <h1 className="cursor-pointer hover:underline">
@@ -52,7 +74,7 @@ const Socials = () => {
                       <h1 className="txtgray">{item.username}</h1>
                     </div>
                   </div>
-                  <MoveUpRight className="size-4" />
+                  {!item.logo ? null : <MoveUpRight className="size-4" />}
                 </div>
               );
             })}

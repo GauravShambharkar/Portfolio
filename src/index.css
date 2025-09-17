@@ -102,3 +102,12 @@ body {
     animation: shine linear infinite;
   }
 
+.hide-on-mobile {
+  display: block;
+}
+
+@media (max-width: 750px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
