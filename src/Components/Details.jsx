@@ -52,7 +52,7 @@ const Details = () => {
     {
       icon: <TbFileCv className="detail_icon_child" />,
       text: (
-        <a target="_blank" href="CV-29-8-25.docx" className="flex">
+        <a href="CV-29-8-25.docx" className="flex">
           <h1>My Resume</h1>
           <h1 className="absolute text-[#efffe3] blur-sm animate-pulse">
             My Resume
