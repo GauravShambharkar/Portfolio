@@ -1,12 +1,18 @@
 import { Code2, Mail, MapPin, Phone } from "lucide-react";
 import { h1 } from "motion/react-client";
 import React, { useState } from "react";
+import { FaUserGraduate } from "react-icons/fa6";
+import { TbFileCv } from "react-icons/tb";
 
 const Details = () => {
   const data = [
     {
       icon: <Code2 className="detail_icon_child" />,
       text: "Full Stack Developer & UI/UX Designer",
+    },
+    {
+      icon: <FaUserGraduate className="detail_icon_child" />,
+      text: "Bachelor of Engineering in ENTC, Sant Gadge Baba Amravati University",
     },
     {
       icon: <MapPin className="detail_icon_child" />,
@@ -40,6 +46,17 @@ const Details = () => {
           href="tele:https://mail.google.com/mail/u/0/#inbox?compose=new"
         >
           +91-8432826130
+        </a>
+      ),
+    },
+    {
+      icon: <TbFileCv className="detail_icon_child" />,
+      text: (
+        <a target="_blank" href="CV-29-8-25.docx" className="flex">
+          <h1>My Resume</h1>
+          <h1 className="absolute text-[#efffe3] blur-sm animate-pulse">
+            My Resume
+          </h1>
         </a>
       ),
     },

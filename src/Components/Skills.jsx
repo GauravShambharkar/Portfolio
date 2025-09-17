@@ -47,7 +47,7 @@ const Skills = () => {
       href: null,
     },
     {
-      node: <SiShadcnui className="size-8" />,
+      node: <SiShadcnui className="size-5" />,
       title: "ShadCnUI",
       href: null,
     },
