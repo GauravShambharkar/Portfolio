@@ -2,6 +2,7 @@ import { Code2, Mail, MapPin, Phone } from "lucide-react";
 import { h1 } from "motion/react-client";
 import React, { useState } from "react";
 import { FaUserGraduate } from "react-icons/fa6";
+import { LiaGraduationCapSolid } from "react-icons/lia";
 import { TbFileCv } from "react-icons/tb";
 
 const Details = () => {
@@ -11,7 +12,7 @@ const Details = () => {
       text: "Full Stack Developer & UI/UX Designer",
     },
     {
-      icon: <FaUserGraduate className="detail_icon_child" />,
+      icon: <LiaGraduationCapSolid className="detail_icon_child" />,
       text: "Bachelor of Engineering in ENTC, Sant Gadge Baba Amravati University",
     },
     {
