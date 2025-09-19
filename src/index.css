@@ -88,26 +88,36 @@ body {
     @apply text-[#848484];
 }
 
-.borderb{
+.borderb {
     @apply border-[#5f5f5f] border-b border-dashed
 }
 
 
 @keyframes shine {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-  
-  .animate-shine {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.animate-shine {
     animation: shine linear infinite;
-  }
+}
 
 .hide-on-mobile {
-  display: block;
+    display: block;
 }
 
 @media (max-width: 750px) {
-  .hide-on-mobile {
-    display: none;
-  }
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+.bgimg {
+    background-position: center,
+
 }

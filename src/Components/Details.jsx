@@ -1,6 +1,6 @@
 import { Code2, Mail, MapPin, Phone } from "lucide-react";
 import { h1 } from "motion/react-client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaUserGraduate } from "react-icons/fa6";
 import { LiaGraduationCapSolid } from "react-icons/lia";
 import { TbFileCv } from "react-icons/tb";

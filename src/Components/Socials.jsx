@@ -1,5 +1,5 @@
 import { Github, Linkedin, MoveUpRight, X } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useStore from "./Global/Store";
 
 const Socials = () => {
@@ -27,11 +27,18 @@ const Socials = () => {
       username: null,
       platform: null,
       profileurl: null,
-      bg: "inouske.gif",
+      bg: "8bitRamen.gif",
     },
   ]);
+  const [randomGifs, setRandomGifs] = useState();
 
   // const {socials} = useStore(store=>store.socials)
+  const gifs = ["inouske.gif", "samurai.gif", ];
+  useEffect(() => {
+    const RandomGifs = gifs[(Math.random() * gifs.length).toFixed()];
+    setRandomGifs(RandomGifs);
+    console.log(RandomGifs);
+  }, []);
 
   return (
     <>
@@ -52,9 +59,10 @@ const Socials = () => {
                   style={
                     !item.logo && item.bg
                       ? {
-                          backgroundImage: `url(${item.bg})`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center -105px",
+                          backgroundImage: `url(${randomGifs})`,
+                          backgroundSize: "auto",
+                          backgroundPosition: "center -163px", //for inouske
+                          // backgroundPosition: "center -146px", // for 8bit ramen
                           width: "100%",
                           height: "100%",
                         }
