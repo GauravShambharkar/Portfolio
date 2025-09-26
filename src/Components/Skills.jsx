@@ -18,10 +18,10 @@ import {
   SiOracle,
   SiSpringboot,
   SiRedis,
-  SiAdonisjs,
-  SiGooglegemini,
   SiReactrouter,
+  SiJira,
 } from "react-icons/si";
+import { DiJira } from "react-icons/di";
 
 const Skills = () => {
   const techLogos = [
@@ -68,6 +68,11 @@ const Skills = () => {
       node: <SiPrisma className="text-[#0C344B]" />,
       title: "Prisma ORM",
       href: "https://prisma.io",
+    },
+    {
+      node: <SiJira className="text-[#2684FF]" />,
+      title: "Jira bug tracker",
+      href: null,
     },
     {
       node: <SiNodedotjs className="text-[#539E43]" />,

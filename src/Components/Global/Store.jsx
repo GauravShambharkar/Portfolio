@@ -1,7 +1,7 @@
 import { MdOnlinePrediction } from "react-icons/md";
 import { create } from "zustand";
 
-const useStore = create((set) => ({
+const useStore = create(() => ({
   projects: [
     {
       img: "backendDirectorygeneratorImg.jpg",
@@ -59,7 +59,7 @@ const useStore = create((set) => ({
         "just like waht NEM does it it create an directory and folder with customised fileName but here you can use any .exe for your file .java, .js, .ts, .py, .c any, creating custom backend directory where this project can ease the process of creating directories and files for the Node, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
     },
     {
-      img: "",
+      img: "portfolio2.0.jpg",
       title: "My portfolio",
       link: "https://github.com/GauravShambharkar/Portfolio",
       live: <MdOnlinePrediction className="text-[#68ff81] size-5" />,
@@ -71,8 +71,7 @@ const useStore = create((set) => ({
         "GSAP",
         "ReactMotion",
       ],
-      description:
-        "just like waht NEM does it it create an directory and folder with customised fileName but here you can use any .exe for your file .java, .js, .ts, .py, .c any, creating custom backend directory where this project can ease the process of creating directories and files for the Node, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
+      description: "My personal portfolio website to showcase my work and skills.",
     },
   ],
 }));

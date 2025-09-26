@@ -9,6 +9,7 @@ import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Outro from "./Components/Outro";
+import AudioPlayer from "./Components/AudioPlayer";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Skills />
         <Projects />
         <Outro />
+        {/* <AudioPlayer /> */}
       </div>
     </>
   );

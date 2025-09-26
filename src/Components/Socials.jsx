@@ -33,9 +33,10 @@ const Socials = () => {
   const [randomGifs, setRandomGifs] = useState();
 
   // const {socials} = useStore(store=>store.socials)
-  const gifs = ["inouske.gif", "samurai.gif", ];
+  const gifs = ["inouske.gif", "samurai.gif"];
+
   useEffect(() => {
-    const RandomGifs = gifs[(Math.random() * gifs.length).toFixed()];
+    const RandomGifs = gifs[Math.floor(Math.random() * gifs.length)];
     setRandomGifs(RandomGifs);
     console.log(RandomGifs);
   }, []);
