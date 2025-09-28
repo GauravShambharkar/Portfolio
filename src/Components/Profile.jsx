@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Profile = () => {
-  const profilePics = ["berserk.jpg", "multiProfile.gif"];
+  const profilePics = ["berserk.jpg", "metaversChar1.gif", "metaversChar2.gif"];
 
   const [randomProfile, setrandomProfile] = useState();
 

@@ -23,7 +23,7 @@ const Nav = () => {
             <a
               target="_blank"
               href="https://wa.me/918261050623"
-              className="border p-1.5  hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
+              className="border p-1.5 inset-shadow-gray-500 inset-shadow-sm  hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
             >
               {/* <MessageCircleMoreIcon className="lucide_icon" /> */}
               <FaWhatsapp className="lucide_icon" />
