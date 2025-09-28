@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Profile = () => {
+  const profilePics = ["berserk.jpg", "multiProfile.gif"];
+
+  const [randomProfile, setrandomProfile] = useState();
+
+  function changePic() {
+    const randomPics =
+      profilePics[Math.floor(Math.random() * profilePics.length)];
+    setrandomProfile(randomPics);
+  }
+
+  useEffect(() => {
+    changePic();
+  }, []);
+
   return (
     <>
       <div className="w-full xcenter ">
@@ -8,7 +22,7 @@ const Profile = () => {
           <div className="w-52 h-full allcenter">
             <a href="" className="w-full  ">
               <img
-                src="berserk.jpg"
+                src={randomProfile}
                 alt=""
                 className="w-full rounded-full object-fill "
               />
