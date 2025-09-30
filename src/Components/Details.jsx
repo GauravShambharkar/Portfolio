@@ -42,10 +42,7 @@ const Details = () => {
     {
       icon: <Phone className="detail_icon_child" />,
       text: (
-        <a
-          target="_blank"
-          href="tele:https://mail.google.com/mail/u/0/#inbox?compose=new"
-        >
+        <a href="tel:+8432826130" className="hover:underline">
           +91-8432826130
         </a>
       ),
@@ -53,9 +50,9 @@ const Details = () => {
     {
       icon: <TbFileCv className="detail_icon_child" />,
       text: (
-        <a href="CV-29-8-25.docx" className="flex">
+        <a href="CV-29-8-25.docx" className="flex hover:underline">
           <h1>My Resume</h1>
-          <h1 className="absolute text-[#efffe3] blur-sm animate-pulse">
+          <h1 className=" absolute text-[#efffe3] blur-sm animate-pulse">
             My Resume
           </h1>
         </a>
