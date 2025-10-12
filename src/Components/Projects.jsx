@@ -79,7 +79,7 @@ const Projects = () => {
           <div className="border-white text-sm xcenter ">
             <button
               onClick={() => setShowAll(!ShowAll)}
-              className="border p-2 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
+              className="border p-2 px-3 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
             >
               {ShowAll ? (
                 <div className="ycenter  gap-2">
