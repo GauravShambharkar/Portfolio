@@ -10,6 +10,10 @@ const Projects = () => {
   const [clickedProject, setClickedProject] = useState([]);
   const projects = useStore((state) => state.projects);
 
+  const [ShowAll, setShowAll] = useState(false);
+
+  const ShowMore = ShowAll ? projects : projects.slice(0, 4);
+
   useEffect(() => {
     console.log(projects);
   }, []);
@@ -22,11 +26,11 @@ const Projects = () => {
 
   return (
     <>
-      <div className="w-full xcenter  relative">
-        <div className="w-190 text-white borderb p-4 flex flex-col gap-5 ">
+      <div className="w-full xcenter relative">
+        <div className="w-190  text-white borderb p-4 flex flex-col gap-5 ">
           <h1>Projects:</h1>
           <div className=" gap-4 border-white grid grid-cols-2 max-[700px]:grid-cols-1 ">
-            {projects.map((items, index) => {
+            {ShowMore.map((items, index) => {
               return (
                 <div
                   key={index}
@@ -70,6 +74,14 @@ const Projects = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="border-white text-sm xcenter ">
+            <button
+              onClick={() => setShowAll(!ShowAll)}
+              className="border px-3 py-1.5 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
+            >
+              {ShowAll ? "Show Less" : "Show More"}
+            </button>
           </div>
         </div>
         {preview && (

@@ -19,7 +19,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
               <span className="w-full h-66">
                 <img
                   src={project.img}
-                  alt=""
+                  alt={project.title}
                   className={
                     project.img
                       ? "w-full rounded-xl"
@@ -28,7 +28,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
                 />
               </span>
             ) : (
-              <div className="w-full h-55 rounded-xl bg-[#414141] allcenter text-sm text-white">
+              <div className="w-full h-75 rounded-xl bg-[#414141] allcenter text-sm text-white">
                 <ShinyText
                   text={"Currently, no image available."}
                   className="text-[#393939]"

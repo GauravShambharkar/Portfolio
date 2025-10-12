@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen relative">
+      <div className="w-full relative">
         <ReactLenis root />
         {/* <RemoveScrollBar/> */}
         <Nav />
