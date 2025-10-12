@@ -4,6 +4,7 @@ import { MdOnlinePrediction } from "react-icons/md";
 import useStore from "./Global/Store";
 import { Github } from "lucide-react";
 import ShinyText from "./AnimationComponents/ShinyText";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Projects = () => {
   const [preview, setPreview] = useState(false);
@@ -78,9 +79,19 @@ const Projects = () => {
           <div className="border-white text-sm xcenter ">
             <button
               onClick={() => setShowAll(!ShowAll)}
-              className="border px-3 py-1.5 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
+              className="border p-2 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
             >
-              {ShowAll ? "Show Less" : "Show More"}
+              {ShowAll ? (
+                <div className="ycenter  gap-2">
+                  Show Less
+                  <IoIosArrowUp />
+                </div>
+              ) : (
+                <div className="gap-2 ycenter ">
+                  Show More
+                  <IoIosArrowDown />
+                </div>
+              )}
             </button>
           </div>
         </div>
