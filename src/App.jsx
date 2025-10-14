@@ -15,18 +15,14 @@ import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import ReactGA from "react-ga4";
 
-
-
 function App() {
   const lenis = useLenis((lenis) => {
     // called every scroll
   });
-  
+
   const clarity_tag_id = import.meta.env.VITE_CLARITY_TAG_ID;
-  
+
   useEffect(() => {
-    ReactGA.initialize(import.meta.env.VITE_GA);
-    
     loadClarity(clarity_tag_id);
   }, []);
   return (

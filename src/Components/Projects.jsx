@@ -20,15 +20,9 @@ const Projects = () => {
   }, []);
 
   const handlePreview = (item, id) => {
-    ReactGA.event({
-      action: "test",
-      category: "project",
-      label: item.title,
-      value: id,
-    });
     setPreview(!preview);
     setClickedProject(item);
-    console.log(item.title);
+    console.log(item.title, id);
   };
 
   return (
