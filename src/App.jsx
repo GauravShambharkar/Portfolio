@@ -10,6 +10,7 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Outro from "./Components/Outro";
 import AudioPlayer from "./Components/AudioPlayer";
+import { useEffect } from "react";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {
@@ -17,6 +18,11 @@ function App() {
     // called every scroll
   });
 
+  const clarity_tag_id = import.meta.env.VITE_CLARITY_TAG_ID;
+
+  useEffect(() => {
+    loadClarity(clarity_tag_id);
+  }, []);
   return (
     <>
       <div className="w-full relative">
