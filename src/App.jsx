@@ -11,6 +11,7 @@ import Projects from "./Components/Projects";
 import Outro from "./Components/Outro";
 import AudioPlayer from "./Components/AudioPlayer";
 import { useEffect } from "react";
+import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 
 function App() {

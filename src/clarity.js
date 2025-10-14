@@ -16,5 +16,4 @@ function loadClarity(tagId) {
   firstScript.parentNode.insertBefore(script, firstScript);
 }
 
-// Call it like this:
-loadClarity("tpwqhu9zht");
+export default loadClarity;
