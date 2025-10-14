@@ -16,7 +16,6 @@ const Projects = () => {
   const ShowMore = ShowAll ? projects : projects.slice(0, 4);
 
   useEffect(() => {
-    ReactGA._gaCommandSendPageview(window.location.pathname);
     console.log(projects);
   }, []);
 
