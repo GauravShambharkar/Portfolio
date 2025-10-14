@@ -15,16 +15,46 @@ import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import ReactGA from "react-ga4";
 
+ReactGA.initialize(import.meta.env.VITE_GA);
+
 function App() {
   const lenis = useLenis((lenis) => {
     // called every scroll
   });
 
-  const clarity_tag_id = import.meta.env.VITE_CLARITY_TAG_ID;
+  // const clarity_tag_id = import.meta.env.VITE_CLARITY_TAG_ID;
+  async function initTracking() {
+    try {
+      // Google Analytics
+      const gaId = import.meta.env.VITE_GA;
+      if (gaId) {
+        ReactGA.initialize(gaId);
+        ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+        // console.log("GA initialized:", gaId);
+      } else {
+        console.warn("GA ID missing!");
+      }
+
+      // Microsoft Clarity
+      const clarityId = import.meta.env.VITE_CLARITY_TAG_ID;
+      if (clarityId) {
+        await loadClarity(clarityId); // if loadClarity returns a promise
+        // console.log("Clarity initialized:", clarityId);
+      } else {
+        console.warn("Clarity ID missing!");
+      }
+    } catch (error) {
+      console.error("Error initializing tracking:", error);
+    }
+  }
 
   useEffect(() => {
-    ReactGA.initialize(import.meta.env.VITE_GA);
-    loadClarity(clarity_tag_id);
+    async function startTracking() {
+      await initTracking();
+    }
+    startTracking();
+
+    // loadClarity(clarity_tag_id);
   }, []);
   return (
     <>
