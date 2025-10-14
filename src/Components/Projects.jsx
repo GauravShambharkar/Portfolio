@@ -5,7 +5,7 @@ import useStore from "./Global/Store";
 import { Github } from "lucide-react";
 import ShinyText from "./AnimationComponents/ShinyText";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
+import ReactGA from "react-ga4";
 const Projects = () => {
   const [preview, setPreview] = useState(false);
   const [clickedProject, setClickedProject] = useState([]);
@@ -16,13 +16,20 @@ const Projects = () => {
   const ShowMore = ShowAll ? projects : projects.slice(0, 4);
 
   useEffect(() => {
+    ReactGA._gaCommandSendPageview(window.location.pathname);
     console.log(projects);
   }, []);
 
-  const handlePreview = (item) => {
+  const handlePreview = (item, id) => {
+    ReactGA.event({
+      action: "test",
+      category: "project",
+      label: item.title,
+      value: id,
+    });
     setPreview(!preview);
     setClickedProject(item);
-    console.log("clicked");
+    console.log(item.title);
   };
 
   return (
@@ -35,7 +42,7 @@ const Projects = () => {
               return (
                 <div
                   key={index}
-                  onClick={() => handlePreview(items)}
+                  onClick={() => handlePreview(items, index)}
                   className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
                   {items.img ? (

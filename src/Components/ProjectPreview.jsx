@@ -12,23 +12,23 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
         {/* card */}
         <div
           onClick={(e) => e.stopPropagation()}
-          className="border border-[#414141]  w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 max-[700px]:w-95 "
+          className="border border-[#414141]  w-150 p-5 rounded-2xl bg-black flex flex-col gap-5 max-[700px]:w-95"
         >
           <a target="_blank" href={project.link}>
             {project.img ? (
-              <span className="w-full h-66">
+              <span className="w-full h-66 ">
                 <img
                   src={project.img}
                   alt={project.title}
                   className={
                     project.img
                       ? "w-full rounded-xl"
-                      : "w-full h-full rounded-xl bg-[#414141]"
+                      : "w-full h-full rounded-xl bg-[#414141] "
                   }
                 />
               </span>
             ) : (
-              <div className="w-full h-75 rounded-xl bg-[#414141] allcenter text-sm text-white">
+              <div className="w-full h-75 rounded-xl bg-[#414141] allcenter text-sm text-white max-[700px]:h-46">
                 <ShinyText
                   text={"Currently, no image available."}
                   className="text-[#393939]"
