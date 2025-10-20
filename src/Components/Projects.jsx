@@ -6,6 +6,7 @@ import { Github } from "lucide-react";
 import ShinyText from "./AnimationComponents/ShinyText";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ReactGA from "react-ga4";
+import { AnimatePresence } from "motion/react";
 const Projects = () => {
   const [preview, setPreview] = useState(false);
   const [clickedProject, setClickedProject] = useState([]);
@@ -95,13 +96,16 @@ const Projects = () => {
             </button>
           </div>
         </div>
-        {preview && (
-          <ProjectPreview
-            project={clickedProject}
-            setPreview={setPreview}
-            preview={preview}
-          />
-        )}
+        <AnimatePresence mode="wait">
+          {preview && (
+            <ProjectPreview
+              key="project-preview"
+              project={clickedProject}
+              setPreview={setPreview}
+              preview={preview}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </>
   );
