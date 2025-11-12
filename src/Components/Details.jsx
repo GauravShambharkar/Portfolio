@@ -6,6 +6,10 @@ import { LiaGraduationCapSolid } from "react-icons/lia";
 import { TbFileCv } from "react-icons/tb";
 
 const Details = () => {
+
+  const Resume = "FSDev-4-11-25.pdf"
+
+
   const data = [
     {
       icon: <Code2 className="detail_icon_child" />,
@@ -50,7 +54,7 @@ const Details = () => {
     {
       icon: <TbFileCv className="detail_icon_child" />,
       text: (
-        <a href="CV-29-8-25.docx" className="flex hover:underline">
+        <a target="_blank" href={Resume} className="flex hover:underline">
           <h1>My Resume</h1>
           <h1 className=" absolute text-[#efffe3] blur-sm animate-pulse">
             My Resume
@@ -59,6 +63,8 @@ const Details = () => {
       ),
     },
   ];
+
+
 
   return (
     <>
