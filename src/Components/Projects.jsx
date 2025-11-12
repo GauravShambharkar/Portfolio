@@ -10,6 +10,8 @@ import { AnimatePresence } from "motion/react";
 const Projects = () => {
   const [preview, setPreview] = useState(false);
   const [clickedProject, setClickedProject] = useState([]);
+
+  // store
   const projects = useStore((state) => state.projects);
 
   const [ShowAll, setShowAll] = useState(false);

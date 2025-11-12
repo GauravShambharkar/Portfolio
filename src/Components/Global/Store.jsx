@@ -54,7 +54,7 @@ const useStore = create(() => ({
         "A fully responsive E-Commerce web application built with React.js that showcases modern front-end development techniques. This project demonstrates state management using Context API, data fetching with Axios, and routing with React Router DOM. 🔧 Features ⚛️ Built with React.js 🔄 Context API for global state management 📦 Cart functionality",
     },
     {
-      img: "learnLift.png",
+      img: "learnLiftt.png",
       title: "Learn lift",
       link: "https://github.com/GauravShambharkar/LearnLift",
       live: false,
