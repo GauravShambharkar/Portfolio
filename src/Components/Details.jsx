@@ -7,7 +7,7 @@ import { TbFileCv } from "react-icons/tb";
 
 const Details = () => {
 
-  const Resume = "FSDev-4-11-25.pdf"
+  const Resume = "FSDev-23-11-25.pdf"
 
 
   const data = [
