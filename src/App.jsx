@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import ReactGA from "react-ga4";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const lenis = useLenis((lenis) => {
@@ -39,6 +40,7 @@ function App() {
         <Skills />
         <Projects />
         <Outro />
+        <Footer/>
         {/* <AudioPlayer /> */}
       </div>
     </>
