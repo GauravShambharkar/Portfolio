@@ -147,9 +147,10 @@ const Projects = () => {
                       </div>
                     )} */}
 
-                    <div className="flex gap-2 justify-between ycenter hover:bg-gray transition-all ease-in-out">
-                      <div className="flex gap-1">
-                        {index + 1}. <h3 className="text-[#969696]" >{items.title}</h3>
+                    <div className="flex gap-2 justify-between ycenter hover:bg-gray transition-all ease-in-out ">
+                      <div className="flex gap-1 border border-dashed border-[#80808076] inset-shadow-sm inset-shadow-gray-600 px-2 rounded-md ">
+                        {index + 1}.{" "}
+                        <h3 className="text-[#969696]">{items.title}</h3>
                         {/* <h5 className="txtgray">
                           {items.description.length > 80
                             ? items.description.slice(0, 90)
