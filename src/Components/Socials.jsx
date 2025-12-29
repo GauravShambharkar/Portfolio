@@ -46,7 +46,7 @@ const Socials = () => {
     <>
       <div className="w-full  xcenter  ">
         <div className="w-190 p-4 flex flex-col borderb">
-          <h1 className="text-md font-medium text-white">Socials: </h1>
+          <h1 className="text-md font-medium text-white">Socials </h1>
           <div className="grid py-4 grid-cols-2 grid-rows-2 gap-5 text-[14px] text-white max-[750px]:grid-cols-1">
             {socials.map((item, index) => {
               return (

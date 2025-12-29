@@ -42,7 +42,7 @@ const Projects = () => {
       <div className="w-full xcenter relative">
         <div className="w-190  text-white borderb p-4 flex flex-col gap-5 ">
           <div className="flex items-center justify-between">
-            <h1>Projects:</h1>
+            <h1>Projects</h1>
             <div className="flex gap-2">
               <div
                 onClick={() => ChangeLayout("grid")}

@@ -139,7 +139,7 @@ const Skills = () => {
     <>
       <div className="w-full xcenter ">
         <div className="w-190 max-[750px]:w-full text-white borderb p-4 flex flex-col gap-8 ">
-          <h1>Skills:</h1>
+          <h1>Skills</h1>
           <LogoLoop
             className="h-fit "
             logos={techLogos}

@@ -5,7 +5,7 @@ const About = () => {
     <>
       <div className="w-full xcenter ">
         <div className="w-190 text-white flex-col borderb flex p-4 gap-3 ">
-          <h1 className="text-md font-medium">About: </h1>
+          <h1 className="text-md font-medium">About </h1>
           <h1 className="text-justify txtgray text-sm">
             Hello, I’m Gaurav. I’m interested in full-stack development and have
             been learning the MERN stack and Java, Spring Boot. I enjoy
