@@ -40,7 +40,7 @@ function App() {
         <Skills />
         <Projects />
         <Outro />
-        <Footer/>
+        <Footer />
         {/* <AudioPlayer /> */}
       </div>
     </>

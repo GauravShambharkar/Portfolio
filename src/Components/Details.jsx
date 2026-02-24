@@ -76,7 +76,7 @@ const Details = () => {
                 <div className="detail_icon_parent flex-shrink-0">
                   <span>{items.icon}</span>
                 </div>
-                <h1 className="text-sm">{items.text}</h1>
+                <h1 className="text-xs">{items.text}</h1>
               </div>
             );
           })}

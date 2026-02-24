@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ProjectPreview from "./ProjectPreview";
 import { MdOnlinePrediction } from "react-icons/md";
 import useStore from "./Global/Store";
@@ -66,6 +66,7 @@ const Projects = () => {
           {/* cards rendering from this code */}
           {Layout === "grid" ? (
             <motion.div
+              key={Layout}
               initial={{ opacity: 0, y: 9 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -102,8 +103,8 @@ const Projects = () => {
 
                     <div className="flex justify-between ycenter">
                       <div className="">
-                        <h3>{items.title}</h3>
-                        <h5 className="txtgray">
+                        <h3 className="text-xs">{items.title}</h3>
+                        <h5 className="txtgray text-xs">
                           {items.description.length > 40
                             ? items.description.slice(0, 40)
                             : items.description}
@@ -117,7 +118,13 @@ const Projects = () => {
               })}
             </motion.div>
           ) : (
-            <div className="gap-4 border-white flex flex-col max-[700px]:grid-cols-1 ">
+            <motion.div
+              key={Layout}
+              initial={{ opacity: 0, y: 9 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="gap-4 border-white flex flex-col max-[700px]:grid-cols-1 "
+            >
               {ShowMore.map((items, index) => {
                 return (
                   <div
@@ -163,7 +170,7 @@ const Projects = () => {
                   </div>
                 );
               })}
-            </div>
+            </motion.div>
           )}
 
           {/* show all cards code */}
@@ -173,12 +180,12 @@ const Projects = () => {
               className="border p-2 px-3 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
             >
               {ShowAll ? (
-                <div className="ycenter  gap-2">
+                <div className="ycenter text-xs  gap-2">
                   Show Less
                   <IoIosArrowUp />
                 </div>
               ) : (
-                <div className="gap-2 ycenter ">
+                <div className="gap-2 text-xs ycenter ">
                   Show More
                   <IoIosArrowDown />
                 </div>

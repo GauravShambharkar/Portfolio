@@ -56,9 +56,9 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
             </a>
             {/* project title descripttions  */}
             <div className="flex justify-between">
-              <div className="text-sm">
-                <h3 className="text-white">{project.title}</h3>
-                <h5 className="txtgray  ">{project.description}</h5>
+              <div className="">
+                <h3 className="text-white text-lg">{project.title}</h3>
+                <h5 className="txtgray text-xs ">{project.description}</h5>
               </div>
               {project.live && (
                 <a
@@ -76,7 +76,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
                 return (
                   <h3
                     key={index}
-                    className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1 rounded-lg text-[11px] bg-[#1a1a1a] "
+                    className="text-white text-[10px] hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1 rounded-lg bg-[#1a1a1a] "
                   >
                     {items}
                   </h3>
@@ -84,7 +84,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
               })}
             </div>
             <a target="_blank" href={project.link} className="w-fit">
-              <button className="text-white cursor-pointer hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1.5 rounded-lg text-[11px] bg-[#1a1a1a] w-fit flex gap-2 items-center ">
+              <button className="text-white text-[10px] cursor-pointer hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1.5 rounded-lg bg-[#1a1a1a] w-fit flex gap-2 items-center ">
                 Visit Repositotry
                 <Github className="size-3.5" />
               </button>

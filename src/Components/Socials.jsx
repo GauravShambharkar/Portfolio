@@ -6,19 +6,19 @@ import { h1 } from "motion/react-client";
 const Socials = () => {
   const [socials, setSocials] = React.useState([
     {
-      logo: "https://assets.chanhdai.com/images/link-icons/liquid-glass/github.webp",
+      logo: "/github.webp",
       username: "gaurav shambharkar",
       platform: "Github",
       profileurl: "https://github.com/GauravShambharkar",
     },
     {
-      logo: "https://assets.chanhdai.com/images/link-icons/liquid-glass/linkedin.webp",
+      logo: "/linkedin.webp",
       username: "Gaurav Shambharkar",
       platform: "Linkedin",
       profileurl: "https://www.linkedin.com/in/gauravsjobprofile/",
     },
     {
-      logo: "https://assets.chanhdai.com/images/link-icons/liquid-glass/x.webp",
+      logo: "/x.webp",
       username: "Gv",
       platform: "X",
       profileurl: "https://x.com/Gv4Real",
@@ -72,11 +72,13 @@ const Socials = () => {
                   }
                 >
                   <div className="flex gap-2 yend p-1">
-                    <img
-                      src={item.logo}
-                      alt={item.platform}
-                      className={!item.logo ? null : "size-11 allcenter"}
-                    />
+                    <div className="border-2 rounded-xl border-[#202020] overflow-hidden">
+                      <img
+                        src={item.logo}
+                        alt={item.platform}
+                        className={!item.logo ? null : "size-11  allcenter"}
+                      />
+                    </div>
                     <div className="flex flex-col ">
                       <h1 className="cursor-pointer hover:underline">
                         {item.platform}
