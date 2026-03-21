@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import ProjectPreview from "./ProjectPreview";
+import ProjectPreview from "../ProjectPreview/ProjectPreview";
 import { MdOnlinePrediction } from "react-icons/md";
-import useStore from "./Global/Store";
+import useStore from "../Global/Store";
 import { Github } from "lucide-react";
-import ShinyText from "./AnimationComponents/ShinyText";
+import ShinyText from "../AnimationComponents/ShinyText";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ReactGA from "react-ga4";
 import { AnimatePresence } from "motion/react";
@@ -14,6 +14,7 @@ import { motion } from "motion/react";
 const Projects = () => {
   const [preview, setPreview] = useState(false);
   const [clickedProject, setClickedProject] = useState([]);
+  const scrollDown = useRef(null);
 
   // store
   const projects = useStore((state) => state.projects);
@@ -23,8 +24,14 @@ const Projects = () => {
   const ShowMore = ShowAll ? projects : projects.slice(0, 4);
 
   useEffect(() => {
-    console.log(projects);
-  }, []);
+    if (ShowAll && scrollDown.current) {
+      scrollDown.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    }
+  }, [ShowAll]);
 
   const handlePreview = (item, id) => {
     setPreview(!preview);
@@ -101,7 +108,10 @@ const Projects = () => {
                       </div>
                     )}
 
-                    <div className="flex justify-between ycenter">
+                    <div
+                      ref={scrollDown}
+                      className="flex justify-between ycenter"
+                    >
                       <div className="">
                         <h3 className="text-xs">{items.title}</h3>
                         <h5 className="txtgray text-xs">
@@ -129,8 +139,9 @@ const Projects = () => {
                 return (
                   <div
                     key={index}
+                    ref={scrollDown}
                     onClick={() => handlePreview(items, index)}
-                    className="cursor-pointer text-sm flex flex-col justify-between gap-4 rounded-xl "
+                    className="cursor-pointer text-sm flex flex-col justify-between gap-4 rounded-xl"
                   >
                     {/* {items.img ? (
                       <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46">

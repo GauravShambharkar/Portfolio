@@ -1,5 +1,5 @@
 import React from "react";
-import CurvedLoop from "../Components/AnimationComponents/CurvedLoop";
+import CurvedLoop from "../AnimationComponents/CurvedLoop";
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
             Some logo
           </a> */}
           <CurvedLoop
-            marqueeText="✦ glad you're here"
+            marqueeText="✦ glad you're here" 
             speed={1}
             curveAmount={500}
             direction="right"

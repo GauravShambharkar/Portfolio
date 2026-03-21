@@ -1,20 +1,21 @@
 import "./App.css";
 import { ReactLenis, useLenis } from "lenis/react";
-import Nav from "./Components/Nav";
-import Header from "./Components/Header";
-import Profile from "./Components/Profile";
-import Details from "./Components/Details";
-import Socials from "./Components/Socials";
-import About from "./Components/About";
-import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
-import Outro from "./Components/Outro";
-import AudioPlayer from "./Components/AudioPlayer";
+import Nav from "./Components/Nav/Nav";
+import Header from "./Components/Header/Header";
+import Profile from "./Components/Profile/Profile";
+import Details from "./Components/Details/Details";
+import Socials from "./Components/Socials/Socials";
+import About from "./Components/About/About";
+import Skills from "./Components/Skills/Skills";
+import Projects from "./Components/Projects/Projects";
+import Outro from "./Components/Outro/Outro";
+import AudioPlayer from "./Components/AudioPlayer/AudioPlayer";
 import { useEffect } from "react";
 import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import ReactGA from "react-ga4";
 import Footer from "./Components/Footer/Footer";
+import Experience from "./Components/Experience/Experience";
 
 function App() {
   const lenis = useLenis((lenis) => {
@@ -35,13 +36,14 @@ function App() {
         <Header />
         <Profile />
         <Details />
+        <Experience />
         <Socials />
         <About />
         <Skills />
         <Projects />
         <Outro />
         <Footer />
-        {/* <AudioPlayer /> */}
+        <AudioPlayer />
       </div>
     </>
   );
