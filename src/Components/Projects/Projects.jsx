@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import ProjectPreview from "./ProjectPreview";
+import ProjectPreview from "../ProjectPreview/ProjectPreview";
 import { MdOnlinePrediction } from "react-icons/md";
-import useStore from "./Global/Store";
+import useStore from "../Global/Store";
 import { Github } from "lucide-react";
-import ShinyText from "./AnimationComponents/ShinyText";
+import ShinyText from "../AnimationComponents/ShinyText";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ReactGA from "react-ga4";
 import { AnimatePresence } from "motion/react";
