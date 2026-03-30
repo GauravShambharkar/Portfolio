@@ -25,6 +25,6 @@ portfolio.jpg
 *.njsproj
 *.sln
 *.sw?
-
+.env
 
 ps-bg-removed
