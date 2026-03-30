@@ -1,6 +1,6 @@
 import { Github, Linkedin, MoveUpRight, X } from "lucide-react";
 import React, { useEffect, useState, Suspense } from "react";
-import useStore from "./Global/Store";
+import useStore from "../Global/Store";
 import { h1 } from "motion/react-client";
 
 const Socials = () => {

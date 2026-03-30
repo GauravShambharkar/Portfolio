@@ -1,5 +1,5 @@
 import React from "react";
-import ShinyText from "./AnimationComponents/ShinyText";
+import ShinyText from "../AnimationComponents/ShinyText";
 
 const Outro = () => {
   return (
