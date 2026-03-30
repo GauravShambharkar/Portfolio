@@ -10,7 +10,6 @@ const Footer = () => {
             <p className="font-extralight text-xs">
               © 2025. All rights reserved.
             </p>
-            <p></p>
           </div>
         </div>
       </div>
