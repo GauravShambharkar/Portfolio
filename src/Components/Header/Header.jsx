@@ -1,5 +1,5 @@
 import React from "react";
-import CurvedLoop from "../Components/AnimationComponents/CurvedLoop";
+import CurvedLoop from "../AnimationComponents/CurvedLoop";
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import LogoLoop from "../Components/AnimationComponents/LogoLoop";
+import LogoLoop from "../AnimationComponents/LogoLoop";
 import {
   SiReact,
   SiNextdotjs,

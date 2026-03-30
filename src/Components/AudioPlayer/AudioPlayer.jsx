@@ -1,7 +1,7 @@
 import { PauseCircle, PlayCircle } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import NoIdea from "../assets/NoIdea.mp3";
+import NoIdea from "../../assets/NoIdea.mp3";
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
