@@ -6,7 +6,7 @@ import { LiaGraduationCapSolid } from "react-icons/lia";
 import { TbFileCv } from "react-icons/tb";
 
 const Details = () => {
-  const Resume = "FSDev-20-11-25.pdf";
+  const Resume = "FSDev-20-3-26.pdf";
 
   const data = [
     {
