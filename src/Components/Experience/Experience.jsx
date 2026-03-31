@@ -13,6 +13,7 @@ const EXPERIENCES = [
         position: "Frontend Developer",
         jobType: "Intern",
         workType: "Remote",
+        job_location: "",
         start: "Jan - 2026",
         end: "March - 2026",
         description:
