@@ -7,14 +7,14 @@ const EXPERIENCES = [
     company: "KhwaaishAi",
     companyLink: "https://www.linkedin.com/company/khwaaish/",
     companyLogo: "/khwaaishLogo.png",
-    status: true,
+    status: false,
     more: [
       {
         position: "Frontend Developer",
         jobType: "Intern",
         workType: "Remote",
-        start: "1 - jan - 2026",
-        end: "Active",
+        start: "Jan - 2026",
+        end: "March - 2026",
         description: "",
         skillStack: [
           "React",
@@ -23,8 +23,8 @@ const EXPERIENCES = [
           "Tailwind CSS",
           "nuqs",
           "zustand",
+          "API",
           "git",
-          "figma",
         ],
       },
     ],
@@ -61,14 +61,16 @@ const Experience = () => {
                           {item.company}
                         </a>
                       </h2>
-                      <div className="relative flex">
-                        <Dot
-                          className={`size-8 rounded-full ${item.status && "text-green-500 animate-ping"} `}
-                        />
-                        <Dot
-                          className={`size-8 rounded-full ${item.status && "text-green-500 absolute"} `}
-                        />
-                      </div>
+                      {item.status && (
+                        <div className="relative flex">
+                          <Dot
+                            className={`size-8 rounded-full ${item.status && "text-green-500 animate-ping"} `}
+                          />
+                          <Dot
+                            className={`size-8 rounded-full ${item.status && "text-green-500 absolute"} `}
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
