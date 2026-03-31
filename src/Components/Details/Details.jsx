@@ -54,7 +54,7 @@ const Details = () => {
       text: (
         <a target="_blank" href={Resume} className="flex hover:underline">
           <h1 className="animate-pulse">My Resume</h1>
-          <h1 className=" absolute text-[#ffffff] blur-sm ">My Resume</h1>
+          <h1 className=" absolute text-[#ffffff] blur-xs ">My Resume</h1>
         </a>
       ),
     },

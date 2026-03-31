@@ -36,7 +36,7 @@ function App() {
         <Profile />
         <Details />
         <Socials />
-        {/* <Experience /> */}
+        <Experience />
         <About />
         <Skills />
         <Projects />
