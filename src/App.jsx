@@ -9,12 +9,12 @@ import About from "./Components/About/About";
 import Skills from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import Outro from "./Components/Outro/Outro";
-
 import { useEffect } from "react";
 import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import ReactGA from "react-ga4";
 import Footer from "./Components/Footer/Footer";
+import Experience from "./Components/Experience/Experience";
 
 function App() {
   const lenis = useLenis((lenis) => {
@@ -36,6 +36,7 @@ function App() {
         <Profile />
         <Details />
         <Socials />
+        <Experience />
         <About />
         <Skills />
         <Projects />
