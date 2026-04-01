@@ -197,18 +197,18 @@ const Projects = () => {
           <div className="border-white text-sm xcenter ">
             <button
               onClick={() => setShowAll(!ShowAll)}
-              className="border p-2 px-3 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-lg allcenter border-[#3c3c3c]"
+              className="border p-2 px-4 inset-shadow-gray-500 inset-shadow-sm cursor-pointer hover:bg-[#323232] transition-all duration-300 ease-in-out rounded-full allcenter border-[#444954]"
             >
               {ShowAll ? (
-                <div className="ycenter text-xs  gap-2">
+                <p className="ycenter text-xs gap-2">
                   Show Less
-                  <IoIosArrowUp />
-                </div>
+                  <IoIosArrowUp className="size-3" />
+                </p>
               ) : (
-                <div className="gap-2 text-xs ycenter ">
+                <p className="gap-2 ycenter text-xs">
                   Show More
-                  <IoIosArrowDown />
-                </div>
+                  <IoIosArrowDown className="size-3" />
+                </p>
               )}
             </button>
           </div>
