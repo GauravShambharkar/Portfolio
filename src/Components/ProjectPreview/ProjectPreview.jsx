@@ -45,6 +45,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
             {project.live && (
               <a
                 className="h-fit text-white text-sm flex gap-1"
+                target="_blank"
                 href={project.link}
               >
                 Live{project.live}

@@ -5,6 +5,7 @@ import useStore from "../Global/Store";
 import { Github } from "lucide-react";
 import ShinyText from "../AnimationComponents/ShinyText";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import BorderGlow from "./BorderGlow";
 
 const Projects = () => {
   const [preview, setPreview] = useState(false);
@@ -33,46 +34,54 @@ const Projects = () => {
           <div className=" gap-4 border-white grid grid-cols-2 max-[700px]:grid-cols-1 ">
             {ShowMore.map((items, index) => {
               return (
-                <div
+                <BorderGlow
                   key={index}
+                  glowRadius={40}
+                  edgeSensitivity={50}
                   onClick={() => handlePreview(items)}
-                  className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
+                  // className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                 >
-                  {items.img ? (
-                    <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46">
-                      <img
-                        src={items.img || null}
-                        alt=""
-                        className={
-                          items.img
-                            ? "w-full h-full rounded-xl"
-                            : "w-full h-full rounded-xl bg-gray-900 "
-                        }
-                      />
-                    </span>
-                  ) : (
-                    // card 4th
-                    <div className="w-full h-46 rounded-xl bg-[#414141] allcenter text-sm text-white max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46 ">
-                      <ShinyText
-                        text={"Currently, no image available."}
-                        className="text-[#aaaaaa]"
-                      />
-                    </div>
-                  )}
+                  <div
+                    key={index}
+                    onClick={() => handlePreview(items)}
+                    className="border-[#323232]   cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
+                  >
+                    {items.img ? (
+                      <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46">
+                        <img
+                          src={items.img || null}
+                          alt=""
+                          className={
+                            items.img
+                              ? "w-full h-full rounded-xl"
+                              : "w-full h-full rounded-xl bg-gray-900 "
+                          }
+                        />
+                      </span>
+                    ) : (
+                      // card 4th
+                      <div className="w-full h-46 rounded-xl bg-[#414141] allcenter text-sm text-white max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46 ">
+                        <ShinyText
+                          text={"Currently, no image available."}
+                          className="text-[#aaaaaa]"
+                        />
+                      </div>
+                    )}
 
-                  <div className="flex justify-between ycenter">
-                    <div className="">
-                      <h3>{items.title}</h3>
-                      <h5 className="txtgray">
-                        {items.description.length > 40
-                          ? items.description.slice(0, 40)
-                          : items.description}
-                        ...
-                      </h5>
+                    <div className="flex justify-between ycenter">
+                      <div className="">
+                        <h3>{items.title}</h3>
+                        <h5 className="txtgray">
+                          {items.description.length > 40
+                            ? items.description.slice(0, 40)
+                            : items.description}
+                          ...
+                        </h5>
+                      </div>
+                      <Github className="size-4" />
                     </div>
-                    <Github className="size-4" />
                   </div>
-                </div>
+                </BorderGlow>
               );
             })}
           </div>

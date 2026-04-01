@@ -5,7 +5,7 @@ const useStore = create(() => ({
   projects: [
     {
       img: "backendDirectorygeneratorImg.jpg",
-      title: "Backend directory generator",
+      title: "Expressify",
       link: "https://github.com/GauravShambharkar/Nodejs-Backend-Directory-Generator",
       live: false,
       liveLink: "",
@@ -19,7 +19,7 @@ const useStore = create(() => ({
         "Archiver",
       ],
       description:
-        "Node js backend directory generator, creating custom backend directory where this project can ease the process of creating directories and files for the Node, Express And MongoDB, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
+        "Expressify is a backend express based backend directory generator, creating custom backend directory where this project can ease the process of creating directories and files for the Node, Express And MongoDB, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
     },
     {
       img: false,
@@ -74,7 +74,7 @@ const useStore = create(() => ({
     },
     {
       img: "MulitbackendDirectorygeneratorImg.jpg",
-      title: "Multi tech-stack Backend directory generator",
+      title: "Expressify 2.0",
       link: "https://github.com/GauravShambharkar/Multi-techStack-backend-directory-Generator",
       live: false,
       liveLink: "",
@@ -88,7 +88,7 @@ const useStore = create(() => ({
         "Archiver",
       ],
       description:
-        "just like waht NEM does it it create an directory and folder with customised fileName but here you can use any .exe for your file .java, .js, .ts, .py, .c any, creating custom backend directory where this project can ease the process of creating directories and files for the Node, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
+        "Just like what Expressify does it it create an directory and folder with customised fileName but with Expressify 2.0 you can use any file extention based on the use case for example, .java, .js, .ts, .py, .c and more for creating custom backend directory where this project can ease the process of creating directories and files for the Node, fill out the form with your custom file_Name click on generate and get the ready to code backend directory.",
     },
     {
       img: "portfolio2.0.jpg",
