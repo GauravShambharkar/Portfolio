@@ -10,6 +10,7 @@ import { AnimatePresence } from "motion/react";
 import { CiGrid41 } from "react-icons/ci";
 import { LuRows4 } from "react-icons/lu";
 import { motion } from "motion/react";
+import BorderGlow from "../Projects/BorderGlow";
 
 const Projects = () => {
   const [preview, setPreview] = useState(false);
@@ -46,8 +47,8 @@ const Projects = () => {
 
   return (
     <>
-      <div className="w-full xcenter relative">
-        <div className="w-190  text-white borderb p-4 flex flex-col gap-5 ">
+      <div className="w-full xcenter relative overflow-x-clip">
+        <div className="w-190 max-w-full text-white borderb p-4 flex flex-col gap-5 ">
           <div className="flex items-center justify-between">
             <h1>Projects</h1>
             <div className="flex gap-2">
@@ -81,49 +82,57 @@ const Projects = () => {
             >
               {ShowMore.map((items, index) => {
                 return (
-                  <div
+                  <BorderGlow
                     key={index}
-                    onClick={() => handlePreview(items, index)}
-                    className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
+                    glowRadius={50}
+                    edgeSensitivity={50}
+                    // onClick={() => handlePreview(items)}
+                    // className="border-[#323232]  border cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-2xl "
                   >
-                    {items.img ? (
-                      <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46">
-                        <img
-                          src={items.img || null}
-                          alt=""
-                          className={
-                            items.img
-                              ? "w-full h-full rounded-xl"
-                              : "w-full h-full rounded-xl bg-gray-900 "
-                          }
-                        />
-                      </span>
-                    ) : (
-                      // card 4th
-                      <div className="w-full h-46 rounded-xl bg-[#414141] allcenter text-sm text-white max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46 ">
-                        <ShinyText
-                          text={"Currently, no image available."}
-                          className="text-[#aaaaaa]"
-                        />
-                      </div>
-                    )}
-
                     <div
-                      ref={scrollDown}
-                      className="flex justify-between ycenter"
+                      key={index}
+                      onClick={() => handlePreview(items, index)}
+                      className="cursor-pointer  p-4 text-sm flex flex-col justify-between gap-4 rounded-3xl "
                     >
-                      <div className="">
-                        <h3 className="text-xs">{items.title}</h3>
-                        <h5 className="txtgray text-xs">
-                          {items.description.length > 40
-                            ? items.description.slice(0, 40)
-                            : items.description}
-                          ...
-                        </h5>
+                      {items.img ? (
+                        <span className="w-full h-46 max-[700px]:h-78  max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46">
+                          <img
+                            src={items.img || null}
+                            alt=""
+                            className={
+                              items.img
+                                ? "w-full h-full rounded-3xl"
+                                : "w-full h-full rounded-3xl bg-gray-900 "
+                            }
+                          />
+                        </span>
+                      ) : (
+                        // card 4th
+                        <div className="w-full h-46 rounded-3xl bg-[#414141] allcenter text-sm text-white max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46 ">
+                          <ShinyText
+                            text={"Currently, no image available."}
+                            className="text-[#aaaaaa]"
+                          />
+                        </div>
+                      )}
+
+                      <div
+                        ref={scrollDown}
+                        className="flex justify-between ycenter "
+                      >
+                        <div className="">
+                          <h3 className="text-xs">{items.title}</h3>
+                          <h5 className="txtgray text-xs">
+                            {items.description.length > 40
+                              ? items.description.slice(0, 40)
+                              : items.description}
+                            ...
+                          </h5>
+                        </div>
+                        <Github className="size-4" />
                       </div>
-                      <Github className="size-4" />
                     </div>
-                  </div>
+                  </BorderGlow>
                 );
               })}
             </motion.div>

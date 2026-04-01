@@ -11,6 +11,7 @@ import Projects from "./Components/Projects/Projects";
 import Outro from "./Components/Outro/Outro";
 import { useEffect } from "react";
 import loadClarity from "./clarity";
+
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import ReactGA from "react-ga4";
 import Footer from "./Components/Footer/Footer";
