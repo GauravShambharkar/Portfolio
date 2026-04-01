@@ -13,9 +13,11 @@ const EXPERIENCES = [
         position: "Frontend Developer",
         jobType: "Intern",
         workType: "Remote",
+        job_location: "",
         start: "Jan - 2026",
         end: "March - 2026",
-        description: "",
+        description:
+          "Implemented parallel API handling (3 concurrent API calls) to reduce load time and improve data fetching efficiency. Managed complex persistent state efficiently, ensuring consistent data flow across the application. Worked on multi-category product architecture, understanding of scalable frontend systems. Developed fully responsive, production-ready UI, ensuring seamless experience across devices and improving user retention.",
         skillStack: [
           "React",
           "Next.js",
@@ -30,6 +32,26 @@ const EXPERIENCES = [
     ],
   },
 ];
+
+const ExpandableText = ({ text, maxLength = 100 }) => {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+
+  if (text.length <= maxLength) {
+    return <p className="text-xs text-white/70">{text}</p>;
+  }
+
+  return (
+    <p className="text-xs text-white/70">
+      {isExpanded ? text : `${text.slice(0, maxLength)}...`}
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="ml-1 text-white cursor-pointer underline decoration-white/30 hover:decoration-white transition-all overflow-hidden"
+      >
+        {isExpanded ? "Show Less" : "Read More"}
+      </button>
+    </p>
+  );
+};
 
 const Experience = () => {
   return (
@@ -90,7 +112,7 @@ const Experience = () => {
                         )}
                       </div>
                       {/* block 2nd */}
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-2 ">
                         <div className="flex gap-2  items-center">
                           <p className="text-sm border border-white/0 h-full">
                             {role.position}
@@ -105,16 +127,14 @@ const Experience = () => {
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 ">
                           <p className="text-xs text-white/60">
                             {role.start} - {role.end}
                           </p>
                         </div>
 
-                        {role.description && role.description.length > 0 && (
-                          <p className="text-sm text-white/70">
-                            {role.description}
-                          </p>
+                        {role.description.length > 0 && (
+                          <ExpandableText text={role.description} />
                         )}
 
                         <SkillStack skills={role.skillStack} />
