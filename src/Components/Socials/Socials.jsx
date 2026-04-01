@@ -2,7 +2,6 @@ import { Github, Linkedin, MoveUpRight, X } from "lucide-react";
 import React, { useEffect, useState, Suspense } from "react";
 import useStore from "../Global/Store";
 
-
 const Socials = () => {
   const [socials, setSocials] = React.useState([
     {
@@ -71,8 +70,10 @@ const Socials = () => {
                       : {}
                   }
                 >
-                  <div className="flex gap-2 yend p-1">
-                    <div className="border-2 rounded-xl border-[#202020] overflow-hidden">
+                  <div className={`flex gap-2 yend p-1 `}>
+                    <div
+                      className={`border-2 rounded-xl border-[#202020] overflow-hidden ${index == 3 && "hidden"}`}
+                    >
                       <img
                         src={item.logo}
                         alt={item.platform}
