@@ -6,7 +6,7 @@ const About = () => {
       <div className="w-full xcenter ">
         <div className="w-190 text-white flex-col borderb flex p-4 gap-3 ">
           <h1 className="text-md font-medium">About </h1>
-          <h1 className="text-justify txtgray text-sm">
+          <h1 className="text-justify txtgray text-xs">
             A full-stack developer focused on building scalable, user-friendly
             web applications.
             <br />

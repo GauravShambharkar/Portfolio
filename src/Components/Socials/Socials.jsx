@@ -70,7 +70,7 @@ const Socials = () => {
                       : {}
                   }
                 >
-                  <div className={`flex gap-2 yend p-1 `}>
+                  <div className={`flex gap-2 ystart p-1`}>
                     <div
                       className={`border-2 rounded-xl border-[#202020] overflow-hidden ${index == 3 && "hidden"}`}
                     >
@@ -84,7 +84,7 @@ const Socials = () => {
                       <h1 className="cursor-pointer hover:underline">
                         {item.platform}
                       </h1>
-                      <h1 className="txtgray">{item.username}</h1>
+                      <h1 className="txtgray text-xs">{item.username}</h1>
                     </div>
                   </div>
                   {!item.logo ? null : <MoveUpRight className="size-4" />}
