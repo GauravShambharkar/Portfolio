@@ -1,6 +1,8 @@
 import React from "react";
 import ShinyText from "../AnimationComponents/ShinyText";
 import { Github } from "lucide-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ProjectPreview = ({ setPreview, preview, project }) => {
   return (
@@ -17,14 +19,12 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
           <a target="_blank" href={project.link}>
             {project.img ? (
               <span className="w-full h-66">
-                <img
+                <LazyLoadImage
                   src={project.img}
                   alt={project.title}
-                  className={
-                    project.img
-                      ? "w-full rounded-xl"
-                      : "w-full h-full rounded-xl bg-[#414141]"
-                  }
+                  effect="blur"
+                  className="w-full rounded-xl object-cover"
+                  wrapperClassName="w-full h-full"
                 />
               </span>
             ) : (

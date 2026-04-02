@@ -6,6 +6,8 @@ import { Github } from "lucide-react";
 import ShinyText from "../AnimationComponents/ShinyText";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import BorderGlow from "./BorderGlow";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Projects = () => {
   const [preview, setPreview] = useState(false);
@@ -48,14 +50,12 @@ const Projects = () => {
                   >
                     {items.img ? (
                       <span className="w-full h-46 max-[700px]:h-78 max-[550px]:h-63 max-[459px]:h-52 max-[410px]:h-46">
-                        <img
-                          src={items.img || null}
-                          alt=""
-                          className={
-                            items.img
-                              ? "w-full h-full rounded-xl"
-                              : "w-full h-full rounded-xl bg-gray-900 "
-                          }
+                        <LazyLoadImage
+                          alt={items.title}
+                          src={items.img}
+                          effect="blur"
+                          className="w-full h-full rounded-xl object-cover"
+                          wrapperClassName="w-full h-full"
                         />
                       </span>
                     ) : (
