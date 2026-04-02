@@ -33,7 +33,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
                 />
               </span>
             ) : (
-              <div className="w-full h-75 rounded-xl bg-[#414141] allcenter text-sm text-white">
+              <div className="w-full h-48 rounded-xl bg-[#414141] allcenter text-sm text-white">
                 <ShinyText
                   text={"Currently, no image available."}
                   className="text-[#393939]"
