@@ -23,9 +23,9 @@ const Details = () => {
         <a
           className="hover:underline"
           target="_blank"
-          href="https://maps.app.goo.gl/nYbwxineb73hpCpo7"
+          href="https://maps.app.goo.gl/EKSrnMyV48rNt3L2A"
         >
-          Hinganghat, Maharashtra, India
+          Nagpur, Maharashtra, India
         </a>
       ),
     },
