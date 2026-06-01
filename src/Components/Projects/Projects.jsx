@@ -83,7 +83,7 @@ const Projects = () => {
                     )}
 
                     <div className="flex justify-between ycenter">
-                      <div className="">
+                      <div className="space-y-2">
                         <h3>{items.title}</h3>
                         <h5 className="txtgray text-xs">
                           {items.description.length > 40

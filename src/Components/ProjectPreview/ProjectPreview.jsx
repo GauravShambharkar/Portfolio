@@ -1,6 +1,6 @@
 import React from "react";
 import ShinyText from "../AnimationComponents/ShinyText";
-import { Github } from "lucide-react";
+import { ArrowRightIcon, Github } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "motion/react";
@@ -63,7 +63,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
               return (
                 <h3
                   key={index}
-                  className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1 rounded-lg text-[11px] bg-[#1a1a1a] "
+                  className="text-white hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-3 capitalize py-1 rounded-full border border-[#2a2a2a] text-[11px] bg-[#0b0b0b] "
                 >
                   {items}
                 </h3>
@@ -71,9 +71,9 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
             })}
           </div>
           <a target="_blank" href={project.link} className="w-fit">
-            <button className="text-white cursor-pointer hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-2 py-1.5 rounded-lg text-[11px] bg-[#1a1a1a] w-fit flex gap-2 items-center ">
+            <button className="text-white cursor-pointer hover:bg-[#303030] transition-all ease-in-out duration-300 inset-shadow-gray-500 inset-shadow-sm px-3 capitalize py-1.5 rounded-full border border-[#2a2a2a] text-sm bg-[#1a1a1a] w-fit flex gap-2 items-center ">
               Visit Repositotry
-              <Github className="size-3.5" />
+              <ArrowRightIcon className="size-3.5 rotate-320" />
             </button>
           </a>
         </div>

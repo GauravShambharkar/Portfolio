@@ -4,6 +4,28 @@ import { create } from "zustand";
 const useStore = create(() => ({
   projects: [
     {
+      img: "twenty4seven1.png",
+      title: "24Seven",
+      link: "",
+      live: false,
+      liveLink: "",
+      projectStack: [
+        "ReactJs",
+        "Nextjs",
+        "TailwindCSS",
+        "Express",
+        "supabase",
+        "Oauth 2.0",
+        "Nodejs",
+        "monorepo",
+        "groq",
+        "gcp",
+        "mcp",
+      ],
+      description:
+        "Automate your emailing work via ai chat or on autopilot mode, whether you are a brand automating email for help or support or startup hiring employees work on what you ask for.",
+    },
+    {
       img: "backendDirectorygeneratorImg.jpg",
       title: "Expressify",
       link: "https://github.com/GauravShambharkar/Nodejs-Backend-Directory-Generator",
