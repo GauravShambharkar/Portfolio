@@ -33,7 +33,7 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
                 />
               </span>
             ) : (
-              <div className="w-full h-48 rounded-xl bg-[#414141] allcenter text-sm text-white">
+              <div className="w-full h-66 rounded-xl bg-[#414141] allcenter text-sm text-white">
                 <ShinyText
                   text={"Currently, no image available."}
                   className="text-[#393939]"
@@ -43,9 +43,9 @@ const ProjectPreview = ({ setPreview, preview, project }) => {
           </a>
           {/* project title descripttions  */}
           <div className="flex justify-between">
-            <div className="text-sm">
+            <div className="text-sm space-y-2">
               <h3 className="text-white">{project.title}</h3>
-              <h5 className="txtgray  ">{project.description}</h5>
+              <h5 className="txtgray  text-xs">{project.description}</h5>
             </div>
             {project.live && (
               <a

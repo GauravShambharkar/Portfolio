@@ -85,7 +85,7 @@ const Projects = () => {
                     <div className="flex justify-between ycenter">
                       <div className="">
                         <h3>{items.title}</h3>
-                        <h5 className="txtgray">
+                        <h5 className="txtgray text-xs">
                           {items.description.length > 40
                             ? items.description.slice(0, 40)
                             : items.description}
