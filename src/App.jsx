@@ -9,11 +9,9 @@ import About from "./Components/About/About";
 import Skills from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import Outro from "./Components/Outro/Outro";
-import AudioPlayer from "./Components/AudioPlayer/AudioPlayer";
 import { useEffect } from "react";
 import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
-import ReactGA from "react-ga4";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
@@ -41,7 +39,6 @@ function App() {
         <Projects />
         <Outro />
         <Footer />
-        {/* <AudioPlayer /> */}
       </div>
     </>
   );

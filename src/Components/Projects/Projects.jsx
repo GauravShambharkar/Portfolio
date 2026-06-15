@@ -5,7 +5,6 @@ import useStore from "../Global/Store";
 import { Github } from "lucide-react";
 import ShinyText from "../AnimationComponents/ShinyText";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import ReactGA from "react-ga4";
 import { AnimatePresence } from "motion/react";
 import { CiGrid41 } from "react-icons/ci";
 import { LuRows4 } from "react-icons/lu";

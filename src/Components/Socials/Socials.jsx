@@ -1,7 +1,5 @@
-import { Github, Linkedin, MoveUpRight, X } from "lucide-react";
-import React, { useEffect, useState, Suspense } from "react";
-import useStore from "../Global/Store";
-import { h1 } from "motion/react-client";
+import { Github, Linkedin, MoveUpRight } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
 const Socials = () => {
   const [socials, setSocials] = React.useState([

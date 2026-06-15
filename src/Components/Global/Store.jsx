@@ -1,7 +1,7 @@
 import { MdOnlinePrediction } from "react-icons/md";
 import { create } from "zustand";
 
-const useStore = create(() => ({
+const useStore = create((set, get) => ({
   projects: [
     {
       img: "backendDirectorygeneratorImg.jpg",
@@ -107,6 +107,46 @@ const useStore = create(() => ({
         "My personal portfolio website to showcase my work and skills.",
     },
   ],
+
+  // Spotify Player
+  spotifyTracks: [
+    {
+      id: 1,
+      title: "Get It Done",
+      artist: "Dashawn Jordan, Blxst",
+      spotifyUrl: "https://open.spotify.com/track/0Fx3I1X3w5RgyX77K1RgXC",
+      audioUrl: "https://p.scdn.co/mp3-preview/a7e40d846bedb3489c4f26eb9d582d87b2a8dfe2",
+    },
+    {
+      id: 2,
+      title: "EYES CLOSED",
+      artist: "MIKE DEAN",
+      spotifyUrl: "https://open.spotify.com/track/1oErbrHCzqVrMwvQy2VmON",
+      audioUrl: "https://p.scdn.co/mp3-preview/fe5d90b846665ab4c345e6727e58a75cb235dac3",
+    },
+    {
+      id: 3,
+      title: "Smile",
+      artist: "G-Unit",
+      spotifyUrl: "https://open.spotify.com/track/4vp9cBkT5bsawqEXaVmkf6",
+      audioUrl: "https://p.scdn.co/mp3-preview/d4084d3b13e378733bda5097af76c0449e21ce50",
+    },
+  ],
+  currentTrackIndex: 0,
+  isPlaying: false,
+
+  setIsPlaying: (isPlaying) => set({ isPlaying }),
+  setCurrentTrackIndex: (index) => set({ currentTrackIndex: index }),
+
+  nextTrack: () => {
+    const { spotifyTracks, currentTrackIndex } = get();
+    set({ currentTrackIndex: (currentTrackIndex + 1) % spotifyTracks.length });
+  },
+
+  prevTrack: () => {
+    const { spotifyTracks, currentTrackIndex } = get();
+    set({ currentTrackIndex: (currentTrackIndex - 1 + spotifyTracks.length) % spotifyTracks.length });
+  },
 }));
 
 export default useStore;
