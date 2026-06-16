@@ -83,7 +83,7 @@ const AudioPlayerWidget = () => {
   return (
     <div className="flex items-center gap-3 bg-[#121212]/90 border border-[#ef4444]/20 hover:border-[#ef4444]/45 rounded-full py-1 px-3 shadow-[0_0_12px_rgba(239,68,68,0.08)] hover:shadow-[0_0_15px_rgba(239,68,68,0.22)] transition-all duration-300">
       {/* Visualizer */}
-      <div className="flex items-center gap-[2.5px] h-4 w-5 justify-center">
+      <div className="flex items-center gap-[2.5px] h-4 w-5 justify-center max-[480px]:hidden">
         {isPlaying ? (
           <div className="flex gap-[2px] items-end h-3">
             <span className="w-[2px] bg-[#ef4444] animate-equalizer-bar" style={{ animationDelay: "0.1s" }}></span>
@@ -100,7 +100,7 @@ const AudioPlayerWidget = () => {
         href={currentTrack?.spotifyUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex flex-col text-left select-none max-w-[120px] max-[480px]:hidden hover:underline cursor-pointer"
+        className="flex flex-col text-left select-none max-w-[120px] hover:underline cursor-pointer"
       >
         <h5 className="text-[10px] font-semibold text-white truncate leading-none">
           {currentTrack?.title || "No Track"}
