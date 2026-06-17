@@ -15,6 +15,8 @@ import loadClarity from "./clarity";
 // import { RemoveScrollBar } from "react-remove-scroll-bar";
 import Footer from "./Components/Footer/Footer";
 import Experience from "./Components/Experience/Experience";
+import AudioPlayerWidget from "./Components/AudioPlayerWidget/AudioPlayerWidget";
+import useStore from "./Components/Global/Store";
 
 function App() {
   const lenis = useLenis((lenis) => {
@@ -22,10 +24,20 @@ function App() {
   });
 
   const clarity_tag_id = import.meta.env.VITE_CLARITY_TAG_ID;
+  const isMobile = useStore((state) => state.isMobile);
+  const setIsMobile = useStore((state) => state.setIsMobile);
 
   useEffect(() => {
     loadClarity(clarity_tag_id);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 750);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <>
       <div className="w-full relative">
@@ -42,6 +54,11 @@ function App() {
         <Projects />
         <Outro />
         <Footer />
+        {isMobile && (
+          <div className="fixed bottom-6 right-6 z-50">
+            <AudioPlayerWidget />
+          </div>
+        )}
       </div>
     </>
   );

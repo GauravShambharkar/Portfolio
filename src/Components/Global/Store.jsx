@@ -134,20 +134,13 @@ const useStore = create((set, get) => ({
   spotifyTracks: [
     {
       id: 1,
-      title: "Get It Done",
-      artist: "Dashawn Jordan, Blxst",
-      spotifyUrl: "https://open.spotify.com/track/0Fx3I1X3w5RgyX77K1RgXC",
-      audioUrl: "https://p.scdn.co/mp3-preview/a7e40d846bedb3489c4f26eb9d582d87b2a8dfe2",
-    },
-    {
-      id: 2,
       title: "EYES CLOSED",
       artist: "MIKE DEAN",
       spotifyUrl: "https://open.spotify.com/track/1oErbrHCzqVrMwvQy2VmON",
       audioUrl: "https://p.scdn.co/mp3-preview/fe5d90b846665ab4c345e6727e58a75cb235dac3",
     },
     {
-      id: 3,
+      id: 2,
       title: "Smile",
       artist: "G-Unit",
       spotifyUrl: "https://open.spotify.com/track/4vp9cBkT5bsawqEXaVmkf6",
@@ -155,9 +148,10 @@ const useStore = create((set, get) => ({
     },
   ],
   currentTrackIndex: 0,
+  isMobile: false,
   isPlaying: false,
-
   setIsPlaying: (isPlaying) => set({ isPlaying }),
+  setIsMobile: (isMobile) => set({ isMobile }),
   setCurrentTrackIndex: (index) => set({ currentTrackIndex: index }),
 
   nextTrack: () => {
