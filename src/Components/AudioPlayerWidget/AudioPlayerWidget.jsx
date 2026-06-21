@@ -136,7 +136,7 @@ const AudioPlayerWidget = () => {
       onClick={handleContainerClick}
       className={`flex items-center transition-all duration-300 bg-[#121212]/40 border border-[#ef4444]/25 hover:border-[#ef4444]/45 rounded-full shadow-[0_0_12px_rgba(239,68,68,0.08)] hover:shadow-[0_0_15px_rgba(239,68,68,0.22)] backdrop-blur-lg cursor-pointer ${
         isExpanded 
-          ? "py-1 px-3 gap-3" 
+          ? "py-1.5 px-3.5 gap-3" 
           : "py-1 px-3 gap-3 max-[750px]:p-1 max-[750px]:gap-0"
       }`}
     >
@@ -175,7 +175,7 @@ const AudioPlayerWidget = () => {
       <div className={`flex items-center gap-2 ${
         isExpanded 
           ? "border-l border-[#282828] pl-2" 
-          : "max-[750px]:gap-0 max-[750px]:border-none max-[750px]:p-0"
+          : "max-[750px]:gap-0 max-[750px]:border-none max-[750px]:p-1"
       }`}>
         <SkipBack
           onClick={handlePrevTrack}
@@ -185,12 +185,12 @@ const AudioPlayerWidget = () => {
         />
         <div
           onClick={handlePlayPauseClick}
-          className="size-5 rounded-full bg-gradient-to-r from-[#ef4444] to-[#ff6b6b] allcenter cursor-pointer hover:scale-110 shadow-[0_0_8px_rgba(239,68,68,0.4)] hover:shadow-[0_0_12px_rgba(239,68,68,0.6)] transition-all duration-200"
+          className="size-5 max-[750px]:size-7 rounded-full bg-gradient-to-r from-[#ef4444] to-[#ff6b6b] allcenter cursor-pointer hover:scale-110 shadow-[0_0_8px_rgba(239,68,68,0.4)] hover:shadow-[0_0_12px_rgba(239,68,68,0.6)] transition-all duration-200"
         >
           {isPlaying ? (
-            <Pause className="size-2 text-black fill-black" />
+            <Pause className="size-2 max-[750px]:size-3 text-black fill-black" />
           ) : (
-            <Play className="size-2 text-black fill-black ml-[1px]" />
+            <Play className="size-2 max-[750px]:size-3 text-black fill-black ml-[1px] max-[750px]:ml-[2px]" />
           )}
         </div>
         <SkipForward
