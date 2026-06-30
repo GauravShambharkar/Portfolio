@@ -9,12 +9,11 @@ const AudioPlayerWidget = () => {
   const setIsPlaying = useStore((state) => state.setIsPlaying);
   const nextTrack = useStore((state) => state.nextTrack);
   const prevTrack = useStore((state) => state.prevTrack);
-  const isMobile = useStore((state) => state.isMobile);
 
   const currentTrack = spotifyTracks[currentTrackIndex];
   const audioRef = useRef(null);
   const widgetRef = useRef(null);
-  const [isExpanded, setIsExpanded] = useState(!isMobile);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // Initialize audio ref with a comfortable default volume
   if (!audioRef.current) {
@@ -25,7 +24,7 @@ const AudioPlayerWidget = () => {
   // Handle initial play attempt on mount & event listeners
   useEffect(() => {
     const audio = audioRef.current;
-    
+
     if (currentTrack?.audioUrl) {
       audio.src = currentTrack.audioUrl;
     }
@@ -61,7 +60,9 @@ const AudioPlayerWidget = () => {
     if (currentTrack?.audioUrl && audio.src !== currentTrack.audioUrl) {
       audio.src = currentTrack.audioUrl;
       if (isPlaying) {
-        audio.play().catch((err) => console.log("Play failed on track switch:", err));
+        audio
+          .play()
+          .catch((err) => console.log("Play failed on track switch:", err));
       }
     }
   }, [currentTrackIndex]);
@@ -79,15 +80,15 @@ const AudioPlayerWidget = () => {
     }
   }, [isPlaying]);
 
-  // Sync isExpanded with isMobile when screen layout changes
-  useEffect(() => {
-    setIsExpanded(!isMobile);
-  }, [isMobile]);
-
   // Click outside to collapse on mobile
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isMobile && isExpanded && widgetRef.current && !widgetRef.current.contains(event.target)) {
+      if (
+        window.innerWidth <= 750 &&
+        isExpanded &&
+        widgetRef.current &&
+        !widgetRef.current.contains(event.target)
+      ) {
         setIsExpanded(false);
       }
     };
@@ -97,26 +98,20 @@ const AudioPlayerWidget = () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, [isMobile, isExpanded]);
+  }, [isExpanded]);
 
   const handleContainerClick = () => {
-    if (isMobile && !isExpanded) {
+    if (window.innerWidth <= 750 && !isExpanded) {
       setIsExpanded(true);
     }
   };
 
   const handlePlayPauseClick = (e) => {
     e.stopPropagation();
-    if (isPlaying) {
-      setIsPlaying(false);
-      if (isMobile) {
-        setIsExpanded(false);
-      }
-    } else {
-      setIsPlaying(true);
-      if (isMobile) {
-        setIsExpanded(true);
-      }
+    const nextPlayState = !isPlaying;
+    setIsPlaying(nextPlayState);
+    if (window.innerWidth <= 750) {
+      setIsExpanded(nextPlayState);
     }
   };
 
@@ -131,22 +126,31 @@ const AudioPlayerWidget = () => {
   };
 
   return (
-    <div 
+    <div
       ref={widgetRef}
       onClick={handleContainerClick}
-      className={`flex items-center transition-all duration-300 bg-[#121212]/40 border border-[#ef4444]/25 hover:border-[#ef4444]/45 rounded-full shadow-[0_0_12px_rgba(239,68,68,0.08)] hover:shadow-[0_0_15px_rgba(239,68,68,0.22)] backdrop-blur-lg cursor-pointer ${
-        isExpanded 
-          ? "py-1.5 px-3.5 gap-3" 
-          : "py-1 px-3 gap-3 max-[750px]:p-1 max-[750px]:gap-0"
+      className={`flex items-center transition-all duration-300 bg-[#121212]/40 border border-[#ef4444]/25 hover:border-[#ef4444]/45 rounded-full shadow-[0_0_12px_rgba(239,68,68,0.08)] hover:shadow-[0_0_15px_rgba(239,68,68,0.22)] backdrop-blur-lg cursor-pointer py-1.5 px-3.5 gap-3 ${
+        isExpanded
+          ? "max-[750px]:py-1.5 max-[750px]:px-3.5 max-[750px]:gap-3"
+          : "max-[750px]:p-1 max-[750px]:gap-0"
       }`}
     >
       {/* Visualizer */}
       <div className="flex items-center gap-[2.5px] h-4 w-5 justify-center max-[750px]:hidden">
         {isPlaying ? (
           <div className="flex gap-[2px] items-end h-3">
-            <span className="w-[2px] bg-[#ef4444] animate-equalizer-bar" style={{ animationDelay: "0.1s" }}></span>
-            <span className="w-[2px] bg-[#ef4444] animate-equalizer-bar" style={{ animationDelay: "0.3s" }}></span>
-            <span className="w-[2px] bg-[#ef4444] animate-equalizer-bar" style={{ animationDelay: "0.5s" }}></span>
+            <span
+              className="w-[2px] bg-[#ef4444] animate-equalizer-bar"
+              style={{ animationDelay: "0.1s" }}
+            ></span>
+            <span
+              className="w-[2px] bg-[#ef4444] animate-equalizer-bar"
+              style={{ animationDelay: "0.3s" }}
+            ></span>
+            <span
+              className="w-[2px] bg-[#ef4444] animate-equalizer-bar"
+              style={{ animationDelay: "0.5s" }}
+            ></span>
           </div>
         ) : (
           <Music className="size-3.5 text-[#ef4444]/60" />
@@ -172,11 +176,13 @@ const AudioPlayerWidget = () => {
       </a>
 
       {/* Controls */}
-      <div className={`flex items-center gap-2 ${
-        isExpanded 
-          ? "border-l border-[#282828] pl-2" 
-          : "max-[750px]:gap-0 max-[750px]:border-none max-[750px]:p-1"
-      }`}>
+      <div
+        className={`flex items-center gap-2 border-l border-[#282828] pl-2 ${
+          isExpanded
+            ? "max-[750px]:border-l max-[750px]:border-[#282828] max-[750px]:pl-2"
+            : "max-[750px]:gap-0 max-[750px]:border-none max-[750px]:p-0"
+        }`}
+      >
         <SkipBack
           onClick={handlePrevTrack}
           className={`size-3 text-[#b3b3b3] hover:text-[#ef4444] cursor-pointer transition-colors duration-200 ${

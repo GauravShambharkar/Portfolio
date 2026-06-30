@@ -1,10 +1,6 @@
 import React from "react";
-import AudioPlayerWidget from "../AudioPlayerWidget/AudioPlayerWidget";
-import useStore from "../Global/Store";
 
 const Nav = () => {
-  const isMobile = useStore((state) => state.isMobile);
-
   return (
     <>
       <div className="w-full xcenter fixed top-0 z-50">
@@ -12,9 +8,7 @@ const Nav = () => {
           <h1 className="bg-gradient-to-bl from-[#ffffff] to-[#686868] font-bold bg-clip-text text-transparent">
             Gv.
           </h1>
-          <div className="flex gap-2 font-light items-center">
-            {!isMobile && <AudioPlayerWidget />}
-          </div>
+          <div className="max-[750px]:hidden"></div>
         </div>
       </div>
     </>

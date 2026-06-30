@@ -148,10 +148,8 @@ const useStore = create((set, get) => ({
     },
   ],
   currentTrackIndex: 0,
-  isMobile: false,
   isPlaying: false,
   setIsPlaying: (isPlaying) => set({ isPlaying }),
-  setIsMobile: (isMobile) => set({ isMobile }),
   setCurrentTrackIndex: (index) => set({ currentTrackIndex: index }),
 
   nextTrack: () => {

@@ -12,11 +12,9 @@ import Outro from "./Components/Outro/Outro";
 import { useEffect } from "react";
 import loadClarity from "./clarity";
 
-// import { RemoveScrollBar } from "react-remove-scroll-bar";
 import Footer from "./Components/Footer/Footer";
 import Experience from "./Components/Experience/Experience";
 import AudioPlayerWidget from "./Components/AudioPlayerWidget/AudioPlayerWidget";
-import useStore from "./Components/Global/Store";
 
 function App() {
   const lenis = useLenis((lenis) => {
@@ -24,18 +22,9 @@ function App() {
   });
 
   const clarity_tag_id = import.meta.env.VITE_CLARITY_TAG_ID;
-  const isMobile = useStore((state) => state.isMobile);
-  const setIsMobile = useStore((state) => state.setIsMobile);
 
   useEffect(() => {
     loadClarity(clarity_tag_id);
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 750);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -54,11 +43,9 @@ function App() {
         <Projects />
         <Outro />
         <Footer />
-        {isMobile && (
-          <div className="fixed bottom-3 right-3 z-50">
-            <AudioPlayerWidget />
-          </div>
-        )}
+        <div className="fixed top-2 right-4 min-[760px]:right-[calc(50vw-372px)] max-[750px]:top-auto max-[750px]:bottom-6 max-[750px]:right-6 z-50">
+          <AudioPlayerWidget />
+        </div>
       </div>
     </>
   );
